@@ -1,4 +1,4 @@
-// ELECTRONBENCH 1.3.1-rc.1 | ESP32-S3 DevKitC-1 · N8/N8R8
+// ELECTRONBENCH 1.4.0-rc.1 | ESP32-S3 DevKitC-1 · N8/N8R8
 // FQBN: esp32:esp32:esp32s3:FlashSize=8M,PSRAM=disabled,CDCOnBoot=default | schema 2
 // Canvas connections carry program signals; see the project pin map.
 #include <Arduino.h>

@@ -61,7 +61,7 @@ document.addEventListener('keydown',e=>{
  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();$('saveProject').click();}
 },true);
 
-function starter(kind,target){const p=E.sample(kind);p.board=target;const b=E.board(p);if(E.isESP(p))for(const n of p.nodes){if(n.type==='led')n.props.pin=target==='esp32-devkitc'?'25':'4';if(n.type==='button')n.props.pin=target==='esp32-devkitc'?'26':'5';if(n.type==='analog')n.props.pin=b.analog[0];if(n.type==='servo')n.props.pin=target==='esp32-devkitc'?'27':'6';if(n.type==='map')n.props.inMax=b.adcMax;}if(E.isESP(p))p.notes=`${b.name} · ${b.voltage} V logic. Use the physical pins in Pin map. External LED needs a current-limiting resistor. Servo needs a suitable supply and common ground. Preview inputs are virtual.`;return p;}
+function starter(kind,target){return E.sample(kind,target);}
 
 window.EBPolish={syncPanels,syncSelection,starter};syncPanels();syncSelection();
 })();

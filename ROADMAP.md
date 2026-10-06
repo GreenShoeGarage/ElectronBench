@@ -1,6 +1,6 @@
 # ELECTRONBENCH development roadmap
 
-Current delivery: **v1.3.1-rc.1**, incorporating v1.1–v1.3. The earlier v1.0 release gates remain open and the network features add live-service acceptance requirements. Implementation status and verification status are separate.
+Current delivery: **v1.4.0-rc.1**, incorporating v1.1–v1.3. The earlier v1.0 release gates remain open and the network features add live-service acceptance requirements. Implementation status and verification status are separate.
 
 | Batch | Delivered outcome | Verification |
 |---|---|---|
@@ -27,7 +27,7 @@ The release candidate contains functioning implementations, including actual com
 | v1.3 | ESP32 Wi-Fi/MQTT status, numeric MQTT publish/subscribe, numeric HTTP GET/POST, TLS/CA configuration, session-only credentials, companion private header, deterministic virtual network scenarios | Logic/DOM/API checks and classic ESP32/S3 network/TLS compilation pass; live broker/server, outage, and TLS acceptance remain open |
 | v1.3 final | Promote this combined feature release after all relevant acceptance procedures pass | Pending browser, accessibility, offline, physical hardware, and live-network evidence in ACCEPTANCE.md |
 
-Current package: **v1.3.1-rc.1**. The user explicitly authorized feature advancement beyond the v1.0 release candidate. This does not retroactively close the original release gates or represent three separately certified stable releases.
+Current package: **v1.4.0-rc.1**. The user explicitly authorized feature advancement beyond the v1.0 release candidate. This does not retroactively close the original release gates or represent three separately certified stable releases.
 
 ## UI cleanup and v2.0 recovery
 
@@ -39,6 +39,12 @@ Current package: **v1.3.1-rc.1**. The user explicitly authorized feature advance
 | Stable promotion | Open | Complete the browser, offline, accessibility, device, and network acceptance gates on the exact integrated source |
 
 The prior session's unpublished v2.0 checkout was missing on resume. No v2.0 implementation or verification is claimed in this package. The v1.1–v1.3 features below remain available in the saved source.
+
+## v1.4 — Arduino expansion
+
+Implemented MKR family profiles (eight models), UNO R4 Minima/WiFi, and GIGA R1 WiFi M7, for sixteen total targets. This includes grouped selection, safe defaults, board-specific ADC/LED/bus/UART handling, timer conflicts, starters/examples, and pinned toolchains. BOARDS.md defines the supported I/O and exclusions; TEST-REPORT.md records compiler coverage.
+
+Next board-related work is physical upload, wiring, ADC/PWM/Servo and serial acceptance on representative hardware. Radio-stack support on these non-ESP32 targets, GIGA M4/RPC, and specialized onboard peripherals require separate implementation; they are not implied by the board profiles. The earlier unpublished v2.0 recovery gap remains open.
 
 ## Remaining release work
 

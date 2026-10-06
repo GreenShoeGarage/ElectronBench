@@ -1,4 +1,6 @@
-# ESP32 networking — v1.3.1-rc.1
+# ESP32 networking — v1.4.0-rc.1
+
+MKR, UNO R4 WiFi and GIGA board profiles support external I/O in this release; the networking components in this guide still require an ESP32 target.
 
 Networking is generated firmware for classic ESP32 WROOM-32 and ESP32-S3 DevKitC-1. The editor and preview do not contact a broker or HTTP endpoint. All live-network and hardware acceptance remains open; successful compilation is not evidence of successful connection or real-time performance.
 

@@ -1,0 +1,6 @@
+profiles:
+  electronbench:
+    fqbn: arduino:samd:mkrnb1500
+    platforms:
+      - platform: arduino:samd (1.8.14)
+default_profile: electronbench

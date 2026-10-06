@@ -1,7 +1,7 @@
 {
   "format": "electronbench",
   "schema": 2,
-  "version": "1.3.1-rc.1",
+  "version": "1.4.0-rc.1",
   "name": "ESP32-S3 heartbeat on GPIO4",
   "board": "esp32-s3-devkitc",
   "nodes": [

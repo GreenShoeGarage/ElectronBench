@@ -19,7 +19,7 @@ for folder in ['companion', 'tests', 'scripts', 'examples', 'verification']:
     for path in sorted((root / folder).rglob('*')):
         if path.is_file() and '__pycache__' not in path.parts:
             files[str(path.relative_to(root))] = path.read_bytes()
-for name in ['README.md', 'UI-REVIEW.md', 'NETWORKING.md', 'ROADMAP.md', 'CHANGELOG.md', 'ACCEPTANCE.md', 'TEST-REPORT.md', 'LICENSE', 'package.json', 'start-companion.sh', 'start-companion.cmd', '.gitignore']:
+for name in ['README.md', 'BOARDS.md', 'UI-REVIEW.md', 'NETWORKING.md', 'ROADMAP.md', 'CHANGELOG.md', 'ACCEPTANCE.md', 'TEST-REPORT.md', 'LICENSE', 'package.json', 'start-companion.sh', 'start-companion.cmd', '.gitignore']:
     files[name] = (root / name).read_bytes()
 assert not any(Path(name).name == 'electronbench_secrets.h' for name in files), 'Do not package filled credentials.'
 files['SHA256SUMS.txt'] = ''.join(f'{hashlib.sha256(data).hexdigest()}  {name}\n' for name, data in sorted(files.items())).encode()

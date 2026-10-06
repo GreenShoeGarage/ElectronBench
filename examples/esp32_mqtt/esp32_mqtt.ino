@@ -1,4 +1,4 @@
-// ELECTRONBENCH 1.3.1-rc.1 | ESP32 DevKitC · WROOM-32
+// ELECTRONBENCH 1.4.0-rc.1 | ESP32 DevKitC · WROOM-32
 // FQBN: esp32:esp32:esp32 | schema 2
 // Canvas connections carry program signals; see the project pin map.
 #include <Arduino.h>

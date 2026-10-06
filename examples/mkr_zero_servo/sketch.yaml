@@ -1,0 +1,8 @@
+profiles:
+  electronbench:
+    fqbn: arduino:samd:mkrzero
+    platforms:
+      - platform: arduino:samd (1.8.14)
+    libraries:
+      - Servo (1.2.2)
+default_profile: electronbench

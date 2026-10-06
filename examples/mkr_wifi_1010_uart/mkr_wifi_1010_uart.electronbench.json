@@ -1,0 +1,64 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.4.0-rc.1",
+  "name": "Untitled instrument",
+  "board": "mkr-wifi-1010",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "uart",
+      "label": "UART number input",
+      "x": 40,
+      "y": 100,
+      "props": {
+        "port": "1",
+        "baud": "9600"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 80,
+      "y": 100,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

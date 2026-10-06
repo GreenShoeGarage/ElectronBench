@@ -1,0 +1,6 @@
+profiles:
+  electronbench:
+    fqbn: arduino:samd:mkrvidor4000
+    platforms:
+      - platform: arduino:samd (1.8.14)
+default_profile: electronbench

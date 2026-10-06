@@ -1,7 +1,7 @@
 {
   "format": "electronbench",
   "schema": 2,
-  "version": "1.3.1-rc.1",
+  "version": "1.4.0-rc.1",
   "name": "One press, one pulse",
   "board": "uno-r3",
   "nodes": [
@@ -72,7 +72,7 @@
     "y": 0,
     "zoom": 1
   },
-  "notes": "Button between D2 and GND (internal pull-up). Pressing produces a 1.5-second pulse on the built-in LED.",
+  "notes": "Button between D2 and GND (internal pull-up); a press produces a 1.5-second pulse. Built-in LED (D13). No external LED required.",
   "network": {
     "ssid": "",
     "mqttHost": "",

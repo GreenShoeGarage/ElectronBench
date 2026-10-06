@@ -1,4 +1,4 @@
-# ELECTRONBENCH v1.3.1 acceptance
+# ELECTRONBENCH v1.4 acceptance
 
 Status: **open**. This file records the missing verification from v1.0.0-rc.1 and v1.3.0-rc.1 and v1.3.1-rc.1; it must not be interpreted as completed tests.
 
@@ -42,8 +42,18 @@ For Uno R3, classic Nano, Mega 2560, classic ESP32 WROOM-32, and ESP32-S3 DevKit
 
 ## Promotion
 
-Attach the observations or summarize them in TEST-REPORT.md. Fix release-blocking findings and rerun the relevant checks. Promote the version to 1.3.1, refresh service-worker cache/version, regenerate examples/package, and deploy the exact tested source. Do not mark these steps passed based on compilation, mocked APIs, or DOM events alone.
+Attach the observations or summarize them in TEST-REPORT.md. Fix release-blocking findings and rerun the relevant checks. Promote the version to 1.4.0, refresh service-worker cache/version, regenerate examples/package, and deploy the exact tested source. Do not mark these steps passed based on compilation, mocked APIs, or DOM events alone.
 
 ## Cleanup-specific browser checks — open
 
 Follow UI-REVIEW.md for the viewport/theme matrix. Confirm Project and starter dialogs, panel resizing by pointer/keys, mobile drawer Tab/Escape behavior, focus after adding/duplicating, visible connection cues, tab arrow keys, context-menu keys, live channel focus under streaming data, touch targets, 200% zoom, and offline reload of polish.js/polish.css. DOM assertions are evidence for event logic only.
+
+## New Arduino board acceptance — open
+
+- Use the exact eight MKR variants, both UNO R4 variants, and GIGA R1 main-M7 profile. Confirm USB discovery, reset/bootloader entry, companion upload, serial reconnect, and a power cycle. Record the specific board/firmware revisions.
+- Confirm built-in LEDs: MKR Zero/Vidor D32, other MKRs D6, UNO R4 D13, and GIGA green LED87 active LOW. Check physical pin labels against the generated report.
+- Measure ADC endpoints and mapping (MKR 12-bit, R4 14-bit, GIGA 16-bit output), including GIGA analog-only A8–A11 and the core-supported A12/A13 ADC paths. These ranges do not establish effective precision or accuracy.
+- Measure PWM on all exposed pins and concurrent independent channels; confirm rejected GIGA channel aliases and MKR Servo/TC4 combinations. Exercise multiple servos with an adequate external supply; check resource exhaustion and timing under sensor/serial load.
+- Wire the default I²C/SPI buses shown in BOARDS.md, including GIGA's dedicated SPI header. Exercise supported sensors and the OLED, missing devices, and bus recovery.
+- Loop back every exposed UART, including GIGA Serial4, while USB telemetry is active. Confirm 3.3 V/5 V level compatibility and runtime behavior.
+- Confirm board-change notices, starter/default adaptation, invalid pins, saved/imported UART4, and capability exclusions in a rendered browser. Existing networking nodes must remain blocked on non-ESP32 boards.

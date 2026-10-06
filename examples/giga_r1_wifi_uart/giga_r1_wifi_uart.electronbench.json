@@ -1,0 +1,139 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.4.0-rc.1",
+  "name": "Untitled instrument",
+  "board": "giga-r1-wifi",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "uart",
+      "label": "UART number input",
+      "x": 40,
+      "y": 100,
+      "props": {
+        "port": "1",
+        "baud": "9600"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 80,
+      "y": 100,
+      "props": {}
+    },
+    {
+      "id": "n3",
+      "type": "uart",
+      "label": "UART number input",
+      "x": 120,
+      "y": 100,
+      "props": {
+        "port": "2",
+        "baud": "9600"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 160,
+      "y": 100,
+      "props": {}
+    },
+    {
+      "id": "n5",
+      "type": "uart",
+      "label": "UART number input",
+      "x": 200,
+      "y": 100,
+      "props": {
+        "port": "3",
+        "baud": "9600"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 240,
+      "y": 100,
+      "props": {}
+    },
+    {
+      "id": "n7",
+      "type": "uart",
+      "label": "UART number input",
+      "x": 280,
+      "y": 100,
+      "props": {
+        "port": "4",
+        "baud": "9600"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 320,
+      "y": 100,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    },
+    {
+      "id": "e3",
+      "from": "n5",
+      "to": "n6",
+      "port": "in"
+    },
+    {
+      "id": "e4",
+      "from": "n7",
+      "to": "n8",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

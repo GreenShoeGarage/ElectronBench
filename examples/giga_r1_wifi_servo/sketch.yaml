@@ -1,0 +1,8 @@
+profiles:
+  electronbench:
+    fqbn: arduino:mbed_giga:giga:target_core=cm7,split=100_0
+    platforms:
+      - platform: arduino:mbed_giga (4.6.0)
+    libraries:
+      - Servo (1.2.2)
+default_profile: electronbench

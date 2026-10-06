@@ -1,8 +1,8 @@
-# ELECTRONBENCH v1.3.1-rc.1
+# ELECTRONBENCH v1.4.0-rc.1
 
 A Green Shoe Garage visual firmware workbench for microcontrollers. **Choose a target → connect behavior → preview and check → compile → upload → observe.**
 
-This release refines the saved v1.3 workbench: a simpler Project menu, grouped tools, clearer connections, readable controls, adjustable panels, mobile drawers, board-aware starters, and keyboard/focus fixes. **82 automated groups pass**, including 35 DOM workflow groups. It remains a **release candidate**: rendered-browser, screen-reader, mobile/touch, offline-reload, physical-board, and live-network acceptance are open. Prior v1.3 compiler evidence is preserved and was not rerun for this UI-only release. See [UI-REVIEW.md](UI-REVIEW.md), [TEST-REPORT.md](TEST-REPORT.md), and [ROADMAP.md](ROADMAP.md).
+This release adds **Arduino MKR, UNO R4 Minima/WiFi, and GIGA R1 WiFi M7** support while retaining the UI cleanup. There are sixteen board profiles. Choose a model with the board button, then use a starter or create your own graph. Board-aware pins, ADC ranges, LED polarity, timers, buses, UARTs, and pinned build profiles are implemented. See [BOARDS.md](BOARDS.md) for exact models and scope, and [TEST-REPORT.md](TEST-REPORT.md) for verification. Physical hardware and rendered-browser acceptance remain open.
 
 The interrupted, unpublished v2.0 checkout was not present when this session resumed. This cleanup is based on the durable v1.3 source and does not claim to restore or deliver v2.0 features.
 
@@ -81,19 +81,17 @@ Custom C++ is compiled locally only after explicit review in the build dialog. C
 
 ## Targets and verification status
 
-All five target profiles have passed representative real toolchain compilation. **All remain hardware-unverified.** Choose the exact board family; similarly named boards are not interchangeable.
+The five previous profiles remain: Uno R3, classic Nano, Mega 2560, classic ESP32 WROOM-32, and ESP32-S3 DevKitC-1 N8/N8R8. Their previous compiler evidence is retained. This release adds:
 
-| Target | Pinned platform | Notes |
-|---|---|---|
-| Arduino Uno R3 | `arduino:avr` 1.8.6 | ATmega328P, 5 V, ADC 0–1023; not Uno R4 |
-| Classic Arduino Nano | `arduino:avr` 1.8.6 | ATmega328P, new bootloader by default; old bootloader selector available but not physically tested |
-| Arduino Mega 2560 | `arduino:avr` 1.8.6 | 5 V, ADC 0–1023, secondary UART1/2/3 |
-| ESP32 DevKitC / WROOM-32 | `esp32:esp32` 3.3.2 | Classic ESP32, 3.3 V, ADC1 0–4095; not C3/S2/S3 or a WROVER profile |
-| ESP32-S3 DevKitC-1 N8/N8R8 | `esp32:esp32` 3.3.2 | 8 MB QSPI flash, PSRAM disabled, 3.3 V; use its USB-to-UART bridge, not native USB CDC |
+| Family | Models | Pinned core | Configured ADC range |
+|---|---|---|---|
+| MKR | Zero, 1000 WiFi, WiFi 1010, GSM 1400, NB 1500, WAN 1300, WAN 1310, Vidor 4000 | `arduino:samd` 1.8.14 | 0–4095 |
+| UNO R4 | Minima, WiFi | `arduino:renesas_uno` 1.6.0 | 0–16383 |
+| GIGA | R1 WiFi, main M7 core | `arduino:mbed_giga` 4.6.0 | 0–65535 |
 
-The catalog intentionally exposes a conservative pin subset. Switching boards preserves the graph and flags incompatible pins for correction. It does not silently retarget wiring or rescale Map range parameters. ESP32 PWM uses LEDC at 1 kHz/8 bits; its servo output uses LEDC at 50 Hz/16 bits. The profile limits combined PWM/servo allocation to eight channels.
+**All boards remain hardware-unverified.** Added profiles support the existing external I/O/peripheral workflow. Onboard radios, FPGA, GIGA M4/RPC and board-specific multimedia/DAC/CAN features are outside this release. MQTT/HTTP nodes still require ESP32. See [BOARDS.md](BOARDS.md) for exact pins, compiler targets, limits, and source references.
 
-Pin map includes individual pins, shared I²C/SPI pins, device addresses, and UART assignments. Validation covers duplicate pins, I²C address collisions, bus-pin use, AVR Servo/PWM timer conflicts, and unsupported UARTs. Memory warnings are estimates; inspect compiler output and allow for heap, stack, and runtime buffers. OLED's 512-byte framebuffer is allocated at runtime and is not part of the compiler's static RAM figure.
+Pin map includes individual pins, shared I²C/SPI pins, device addresses, and UART assignments. Validation covers duplicate pins, I²C address collisions, bus-pin use, board-specific Servo/PWM timer conflicts and GIGA PWM channel aliases, and unsupported UARTs. Memory warnings are estimates; inspect compiler output and allow for heap, stack, and runtime buffers. OLED's 512-byte framebuffer is allocated at runtime and is not part of the compiler's static RAM figure.
 
 ## Components and project tools
 
@@ -195,7 +193,7 @@ ELECTRONBENCH_NETWORK_BUILD=1 node tests/real-companion-build.cjs
 
 `npm test` requires Node, `g++`, and Python 3. Test doubles under `tests/` are never firmware dependencies. Optional tests can use `ELECTRONBENCH_JSDOM` to locate a separate jsdom installation, plus the CLI/config variables above. No package installation is necessary for the shipped editor or companion.
 
-`verification/` contains machine-readable results from this release's real compiles and the build-toolchain version. Remaining manual acceptance procedures are in [ACCEPTANCE.md](ACCEPTANCE.md). The test report makes no physical hardware or rendered-browser claim.
+`verification/` contains current compiler results and preserved historical evidence, with toolchain versions identified in TEST-REPORT.md. Remaining manual acceptance procedures are in [ACCEPTANCE.md](ACCEPTANCE.md). The test report makes no physical hardware or rendered-browser claim.
 
 ## License
 

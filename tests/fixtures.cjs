@@ -7,9 +7,11 @@ function behaviors(board='uno-r3'){
  const pwm=g.add('pwm');g.link(value,pwm);g.p.settings.telemetry=true;return g.p;
 }
 function feedback(board='uno-r3'){const g=graph(board),memory=g.add('memory',{initial:0}),one=g.add('constant',{value:1}),add=g.add('math'),probe=g.add('probe');g.link(memory,add,'a');g.link(one,add,'b');g.link(add,memory);g.link(memory,probe);return g.p;}
-function peripherals(board='uno-r3'){const g=graph(board);g.add('mcp9808');g.add('bh1750');g.add('max31855',{pin:board==='esp32-devkitc'?'27':board==='esp32-s3-devkitc'?'10':'10'});g.p.settings.telemetry=true;return g.p;}
-function uart(board='mega-2560'){const g=graph(board),read=g.add('uart'),probe=g.add('probe');g.link(read,probe);return g.p;}
-function starter(name,board){const p=E.sample(name);p.board=board;if(E.isESP(board)){for(const n of p.nodes){if(n.type==='led')n.props.pin=board==='esp32-devkitc'?'25':'4';if(n.type==='button')n.props.pin=board==='esp32-devkitc'?'26':'5';if(n.type==='analog')n.props.pin=E.board(board).analog[0];if(n.type==='servo')n.props.pin=board==='esp32-devkitc'?'27':'6';if(n.type==='map')n.props.inMax=4095;}}return p;}
+function peripherals(board='uno-r3'){const g=graph(board);g.add('mcp9808');g.add('bh1750');g.add('max31855');g.p.settings.telemetry=true;return g.p;}
+function uart(board='mega-2560'){const g=graph(board);for(const port of E.board(board).uart){const read=g.add('uart',{port});g.link(read,g.add('probe'));}return g.p;}
+function adc(board='uno-r3'){const g=graph(board);for(const pin of E.board(board).analog)g.add('analog',{pin});g.p.settings.telemetry=true;return g.p;}
+function pwm(board='uno-r3'){const g=graph(board),value=g.add('constant',{value:127});for(const pin of E.board(board).pwm){if((E.board(board).pwmConflicts||[]).some(pair=>pair[1]===pin))continue;g.link(value,g.add('pwm',{pin}));}return g.p;}
+function starter(name,board){return E.sample(name,board);}
 function expandedSensors(board='uno-r3'){const g=graph(board);for(const measurement of ['temperature','humidity','pressure'])g.add('bme280',{measurement});for(const measurement of ['voltage','current','power'])g.add('ina219',{measurement});g.p.settings.telemetry=true;return g.p;}
 function networking(board='esp32-devkitc',secure=false){const g=graph(board),value=g.add('bme280'),pub=g.add('mqttPublish'),sub=g.add('mqttSubscribe'),post=g.add('httpPost'),get=g.add('httpGet');g.link(value,pub);g.link(value,post);g.add('networkStatus',{service:'wifi'});g.add('networkStatus',{service:'mqtt'});g.link(sub,g.add('probe'));g.link(get,g.add('probe'));g.p.network={...E.network.defaults(),ssid:'TEST_SSID',mqttHost:'broker.example',mqttTLS:secure,mqttPort:secure?8883:1883,rootCA:secure?'-----BEGIN CERTIFICATE-----\nTEST_ONLY_NOT_A_VALID_CERTIFICATE\n-----END CERTIFICATE-----':''};if(secure)for(const n of [post,get])n.props.url='https://example.com/value';g.p.settings.telemetry=true;return g.p;}
-module.exports={networking,expandedSensors,E,graph,behaviors,feedback,peripherals,uart,starter,appDir};
+module.exports={adc,pwm,networking,expandedSensors,E,graph,behaviors,feedback,peripherals,uart,starter,appDir};

@@ -1,39 +1,60 @@
-# ELECTRONBENCH v1.3.1-rc.1 — verification report
+# ELECTRONBENCH v1.4.0-rc.1 — verification report
 
-Date: 2026-10-05. Status: **release candidate; rendered-browser and device acceptance incomplete**. This delivery is a UI/UX cleanup of the saved v1.3 line.
+Date: 2026-10-06. Status: **release candidate; physical hardware and rendered-browser acceptance incomplete**. This release adds eleven Arduino profiles while preserving the previous five and the UI cleanup.
 
-## Checks run for this release
+## Current automated results
 
 | Check | Result | Scope |
 |---|---|---|
-| Syntax and version consistency | Pass | All shipped JS parses; UI/package/cache version agrees |
-| Logic and generated host code | 25 groups pass | Existing validation, migration, timing, generated C++ behavior, independent ZIP decoding |
-| Expanded board/sensor/network logic | 10 groups pass | Sensor sharing, S3 pins, configuration, message expiry, parsing, credential separation |
-| DOM event workflows | 35 groups pass | Existing 20 workflows plus selection/focus, pointer selection, connection guidance, tabs, menu, catalog, resize, mobile drawer, blocked preview, target-aware starters, Fit, stream focus, safe Delete, and missing-data gaps |
-| Cache API double | 3 groups pass | Every linked JS/CSS asset plus worker present; old-cache cleanup; relative subdirectory paths and API exclusion |
-| Companion API with CLI double | 9 groups pass | Pairing/origin gates, discovery, builds/uploads, custom-code review, cancellation, serial handoff, malformed import, private headers/redaction |
+| JavaScript and release consistency | Pass | JS parses; package, visible UI and service-worker version agree |
+| Existing logic / generated host code | 25 groups pass | Validation, import, timing/state, host-compiled generated C++, ZIP decoding and UART parsing |
+| Expanded sensor/network logic | 10 groups pass | Existing S3/sensor/network validation and parser behavior |
+| New Arduino board profiles | 12 groups pass | Exact targets, round trips, ADC/Servo endpoints, physical resource maps, LED polarity, GIGA channel aliases, UART4, and unsupported networking/pins |
+| DOM workflows | 40 groups pass | Prior 35 workflows plus grouped board selection, fresh-target persistence, physical pin maps, R4 ADC preview, and repair of a GIGA PWM conflict |
+| Service-worker cache double | 3 groups pass | Complete linked asset list, cache cleanup and subdirectory behavior |
+| Companion API with CLI double | 9 groups pass | Existing API/security/build/serial/recovery orchestration |
+| Real target compilation | **121 / 121 pass** | Eleven fixture classes on each of eleven new profiles |
+| Real companion pinned-profile builds | **3 / 3 pass** | Sensor/OLED projects on MKR WiFi 1010, UNO R4 WiFi and GIGA M7 through the actual local API |
 
-**82 automated groups passed.** The DOM runner uses jsdom 26.1.0 and loads the script list from index.html. Pointer/layout tests use mocked dimensions; they do not render the app. Host C++ execution uses g++ and explicit MCU API doubles.
+**99 automated groups passed**, plus 121 real target compilations and 3 actual companion builds. No physical firmware upload occurred.
 
-## Prior compiler evidence
+The eleven compiler fixtures per target cover all exposed ADC pins, independent PWM pins, blink, ADC-to-Servo, button/debounce/pulse, sensor/OLED, arithmetic/state/custom code, delayed feedback, MCP9808/BH1750/MAX31855, BME280/INA219 shared measurements, and all exposed UART channels. GIGA ADC compilation includes A8–A11's special analog-only types and A12/A13's ADC paths; UART compilation includes Serial4. Disallowed channel combinations are tested as validation failures rather than submitted to the compiler.
 
-The v1.3.0-rc.1 report, 47 target compile results, 2 real pinned companion builds, and source hashes are preserved under `verification/v1.3.0-rc.1/`. Top-level compiler result files retain that same historical data. They were **not rerun** for this UI cleanup. The firmware generator changes only its version string; generated example sketches change the release comment. No physical board or live firmware network check was performed.
+## Toolchains and evidence
 
-## Remaining verification
+Arduino CLI 1.5.1; Arduino SAMD 1.8.14; Renesas UNO 1.6.0; Mbed GIGA 4.6.0; Servo 1.2.2 and the other exact dependency versions emitted by the build profile. The matrix used installed versions matching these pins. The three companion builds used `compile --profile electronbench`, including profile dependency resolution, and produced retained firmware artifacts.
 
-Rendered layout, theme contrast, real browser keyboard/screen-reader behavior, mobile/touch, print pagination, serial permissions, service-worker lifecycle, offline reload, physical devices, and real MQTT/HTTP/TLS acceptance remain open. Follow `UI-REVIEW.md` and `ACCEPTANCE.md`. The required browser QA capability is unavailable in this managed environment; no preview/browser workaround was used.
+`verification/target-compiles.json` has each result, compiler output and memory figures. `verification/pinned-companion-builds.json` has the three actual API jobs. `verification/board-source-evidence.json` records core archive checksums and hashes of inspected official source. `verification/release-evidence.json` records application source hashes.
 
-The interrupted, unpublished v2.0 checkout was unavailable. This report does not claim that v2.0 was restored, implemented, or tested.
+The first compiler attempt exposed a truncated local `cc1` executable after tool installation. Its archive matched Arduino's published checksum. The incomplete extracted file was restored byte-for-byte from that verified archive; the compiler probe and complete matrix then passed. Compiler source, generated firmware and pinned toolchain versions were not changed to bypass the failure.
+
+The previous five targets were not recompiled with real toolchains in this batch. Their v1.3.0 results remain under `verification/v1.3.0-rc.1/`; UI-only v1.3.1 evidence remains under `verification/v1.3.1-rc.1/`. Current host/logic/DOM regression tests cover the retained behavior. Historical compiler runs are not counted in the 121 results above.
+
+## Open acceptance and boundaries
+
+No physical board, upload, electrical measurement, bootloader/reconnect, sensor accuracy, Servo timing, or live USB/UART observation was performed. Compilation establishes compatibility with the selected core and libraries, not working hardware or a safe runtime memory/timing margin. Read BOARDS.md and ACCEPTANCE.md before physical tests.
+
+MKR/UNO R4/GIGA radios and board-specific FPGA, M4/RPC, multimedia, DAC, CAN, and extra-bus components are not implemented. Existing MQTT/HTTP nodes remain ESP32-only and are blocked on the new profiles.
+
+Rendered-browser QA is unavailable under this environment's Sites workflow. No alternate preview/browser path was used. Layout, touch, actual keyboard/screen-reader behavior, printing, service-worker installation/offline reload, and browser serial permissions remain open. jsdom 26.1.0 exercises events and state, not layout or device APIs. UI-REVIEW.md preserves the cleanup review and open visual matrix.
+
+The interrupted unpublished v2.0 source remains unavailable; this board expansion does not claim to restore it.
 
 ## Reproduce
 
 ```sh
 npm run check
 npm test
-# Install jsdom 26.1.0 in a separate development directory, then:
 ELECTRONBENCH_JSDOM=/absolute/path/to/node_modules/jsdom npm run test:dom
+# Install the exact cores/dependencies from the generated sketch.yaml profiles.
+# Use the same Arduino CLI data/config for compiler runs:
+ELECTRONBENCH_ARDUINO_CLI=/absolute/path/arduino-cli \
+ELECTRONBENCH_ARDUINO_CONFIG=/absolute/path/arduino-cli.yaml \
+node tests/compiler-matrix.cjs mkr-zero mkr-1000 mkr-wifi-1010 mkr-gsm-1400 mkr-nb-1500 mkr-wan-1300 mkr-wan-1310 mkr-vidor-4000 uno-r4-minima uno-r4-wifi giga-r1-wifi
+# Optional fixture filter: ELECTRONBENCH_FIXTURE=adc,pwm,servo,uart
+ELECTRONBENCH_TARGETS=mkr-wifi-1010,uno-r4-wifi,giga-r1-wifi npm run test:real-companion
 node scripts/export-examples.cjs
-python3 scripts/package-release.py /absolute/path/ELECTRONBENCH-v1.3.1-rc.1.zip
+python3 scripts/package-release.py /absolute/path/ELECTRONBENCH-v1.4.0-rc.1.zip
 ```
 
-The frontend itself remains dependency-free and needs no npm install or build step. `verification/release-evidence.json` records source hashes for this release; the ZIP contains per-file SHA256SUMS.
+Set the CLI/config environment variables for companion tests as well. The frontend remains dependency-free and requires no npm install or build step. The release ZIP contains 31 example projects and per-file SHA256SUMS.

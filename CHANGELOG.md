@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.0-rc.1 — 2026-10-06
+
+- Added eight MKR SAMD profiles, UNO R4 Minima/WiFi, and GIGA R1 WiFi M7; retained the five existing boards.
+- Pinned SAMD 1.8.14, Renesas UNO 1.6.0, and Mbed GIGA 4.6.0 build profiles.
+- Made starters/defaults board-aware in the core shared by browser, exports, tests and companion; fresh projects retain the selected target.
+- Matched generated ADC resolution to preview ranges, corrected built-in LED pins/polarity, and centralized SPI/UART pin reporting and validation.
+- Added GIGA UART4 import/export, MKR Servo/TC4 checks, and GIGA complementary PWM channel conflicts.
+- Grouped the board chooser by family with explicit voltage, ADC, core and support boundaries. Added 19 examples and BOARDS.md.
+- New boards support the existing external I/O/peripheral workflow. Their radio stacks, FPGA, GIGA M4/RPC and specialized peripherals remain outside this release. Hardware and rendered-browser acceptance remain open.
+
 ## 1.3.1-rc.1 — 2026-10-05
 
 UI/UX cleanup of the saved v1.3 source. The interrupted v2.0 checkout was unavailable; this release does not include that unpublished work.

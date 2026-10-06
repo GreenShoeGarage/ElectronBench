@@ -1,477 +1,1223 @@
 {
-  "date": "2026-10-05T21:50:55.491Z",
-  "version": "1.3.0-rc.1",
-  "mode": "installed toolchains",
+  "date": "2026-10-06T01:46:30.245Z",
+  "version": "1.4.0-rc.1",
+  "mode": "installed toolchains matching pinned versions; explicit dependencies installed",
+  "cli": "1.5.1",
+  "cores": {
+    "arduino:samd": "1.8.14",
+    "arduino:renesas_uno": "1.6.0",
+    "arduino:mbed_giga": "4.6.0"
+  },
   "results": [
     {
-      "board": "uno-r3",
-      "fixture": "blink",
+      "board": "giga-r1-wifi",
+      "fixture": "adc",
       "pass": true,
       "memory": [
-        "Sketch uses 920 bytes (2%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 119400 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47720 bytes (9%) of dynamic memory, leaving 475904 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 920 bytes (2%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes.\n"
+      "log": "Sketch uses 119400 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47720 bytes (9%) of dynamic memory, leaving 475904 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "uno-r3",
-      "fixture": "servo",
-      "pass": true,
-      "memory": [
-        "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "uno-r3",
-      "fixture": "button",
-      "pass": true,
-      "memory": [
-        "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "uno-r3",
-      "fixture": "display",
-      "pass": true,
-      "memory": [
-        "Sketch uses 19218 bytes (59%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 19218 bytes (59%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
-    },
-    {
-      "board": "uno-r3",
+      "board": "giga-r1-wifi",
       "fixture": "behaviors",
       "pass": true,
       "memory": [
-        "Sketch uses 5964 bytes (18%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 121184 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47952 bytes (9%) of dynamic memory, leaving 475672 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 5964 bytes (18%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes.\n"
+      "log": "Sketch uses 121184 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47952 bytes (9%) of dynamic memory, leaving 475672 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "uno-r3",
-      "fixture": "feedback",
-      "pass": true,
-      "memory": [
-        "Sketch uses 3428 bytes (10%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 3428 bytes (10%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "uno-r3",
-      "fixture": "peripherals",
-      "pass": true,
-      "memory": [
-        "Sketch uses 11472 bytes (35%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 11472 bytes (35%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
-    },
-    {
-      "board": "uno-r3",
-      "fixture": "expandedSensors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 15500 bytes (48%) of program storage space. Maximum is 32256 bytes.",
-        "Global variables use 566 bytes (27%) of dynamic memory, leaving 1482 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 15500 bytes (48%) of program storage space. Maximum is 32256 bytes.\nGlobal variables use 566 bytes (27%) of dynamic memory, leaving 1482 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "nano-classic",
+      "board": "giga-r1-wifi",
       "fixture": "blink",
       "pass": true,
       "memory": [
-        "Sketch uses 920 bytes (2%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 110768 bytes (5%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47504 bytes (9%) of dynamic memory, leaving 476120 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 920 bytes (2%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes.\n"
+      "log": "Sketch uses 110768 bytes (5%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47504 bytes (9%) of dynamic memory, leaving 476120 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "nano-classic",
-      "fixture": "servo",
-      "pass": true,
-      "memory": [
-        "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "nano-classic",
+      "board": "giga-r1-wifi",
       "fixture": "button",
       "pass": true,
       "memory": [
-        "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 111024 bytes (5%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47520 bytes (9%) of dynamic memory, leaving 476104 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes.\n"
+      "log": "Sketch uses 111024 bytes (5%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47520 bytes (9%) of dynamic memory, leaving 476104 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "nano-classic",
+      "board": "giga-r1-wifi",
       "fixture": "display",
       "pass": true,
       "memory": [
-        "Sketch uses 19218 bytes (62%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 139360 bytes (7%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 54048 bytes (10%) of dynamic memory, leaving 469576 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 19218 bytes (62%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
+      "log": "Sketch uses 139360 bytes (7%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 54048 bytes (10%) of dynamic memory, leaving 469576 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "nano-classic",
-      "fixture": "behaviors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 5964 bytes (19%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 5964 bytes (19%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "nano-classic",
-      "fixture": "feedback",
-      "pass": true,
-      "memory": [
-        "Sketch uses 3428 bytes (11%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 3428 bytes (11%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes.\n"
-    },
-    {
-      "board": "nano-classic",
-      "fixture": "peripherals",
-      "pass": true,
-      "memory": [
-        "Sketch uses 11472 bytes (37%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes."
-      ],
-      "log": "Sketch uses 11472 bytes (37%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
-    },
-    {
-      "board": "nano-classic",
+      "board": "giga-r1-wifi",
       "fixture": "expandedSensors",
       "pass": true,
       "memory": [
-        "Sketch uses 15500 bytes (50%) of program storage space. Maximum is 30720 bytes.",
-        "Global variables use 566 bytes (27%) of dynamic memory, leaving 1482 bytes for local variables. Maximum is 2048 bytes."
+        "Sketch uses 135680 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 54096 bytes (10%) of dynamic memory, leaving 469528 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 15500 bytes (50%) of program storage space. Maximum is 30720 bytes.\nGlobal variables use 566 bytes (27%) of dynamic memory, leaving 1482 bytes for local variables. Maximum is 2048 bytes.\n"
+      "log": "Sketch uses 135680 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 54096 bytes (10%) of dynamic memory, leaving 469528 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "mega-2560",
-      "fixture": "blink",
+      "board": "giga-r1-wifi",
+      "fixture": "feedback",
       "pass": true,
       "memory": [
-        "Sketch uses 1532 bytes (0%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 13 bytes (0%) of dynamic memory, leaving 8179 bytes for local variables. Maximum is 8192 bytes."
+        "Sketch uses 111392 bytes (5%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47536 bytes (9%) of dynamic memory, leaving 476088 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 1532 bytes (0%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 13 bytes (0%) of dynamic memory, leaving 8179 bytes for local variables. Maximum is 8192 bytes.\n"
+      "log": "Sketch uses 111392 bytes (5%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47536 bytes (9%) of dynamic memory, leaving 476088 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "mega-2560",
+      "board": "giga-r1-wifi",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 133728 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 54024 bytes (10%) of dynamic memory, leaving 469600 bytes for local variables. Maximum is 523624 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on mbed_giga architecture(s).\nSketch uses 133728 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 54024 bytes (10%) of dynamic memory, leaving 469600 bytes for local variables. Maximum is 523624 bytes.\n"
+    },
+    {
+      "board": "giga-r1-wifi",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 120008 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47920 bytes (9%) of dynamic memory, leaving 475704 bytes for local variables. Maximum is 523624 bytes."
+      ],
+      "log": "Sketch uses 120008 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47920 bytes (9%) of dynamic memory, leaving 475704 bytes for local variables. Maximum is 523624 bytes.\n"
+    },
+    {
+      "board": "giga-r1-wifi",
       "fixture": "servo",
       "pass": true,
       "memory": [
-        "Sketch uses 4412 bytes (1%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 165 bytes (2%) of dynamic memory, leaving 8027 bytes for local variables. Maximum is 8192 bytes."
+        "Sketch uses 119168 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 49184 bytes (9%) of dynamic memory, leaving 474440 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 4412 bytes (1%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 165 bytes (2%) of dynamic memory, leaving 8027 bytes for local variables. Maximum is 8192 bytes.\n"
+      "log": "WARNING: library Servo claims to run on avr, megaavr, sam, samd, nrf52, stm32f4, mbed, mbed_nano, mbed_portenta, mbed_rp2040, renesas, renesas_portenta, renesas_uno architecture(s) and may be incompatible with your current board which runs on mbed_giga architecture(s).\nSketch uses 119168 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 49184 bytes (9%) of dynamic memory, leaving 474440 bytes for local variables. Maximum is 523624 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp: In member function 'void ServoImpl::start(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp:31:66: warning: 'void mbed::TickerBase::attach(F&&, float) [with F = mbed::Callback<void()>]' is deprecated: Pass a chrono duration, not a float second count. For example use `10ms` rather than `0.01f`. [since mbed-os-6.0.0] [-Wdeprecated-declarations]\n       ticker.attach(mbed::callback(this, &ServoImpl::call), 0.02f);\n                                                                  ^\nIn file included from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed/mbed.h:84:0,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed.h:8,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp:5:\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed/drivers/include/drivers/Ticker.h:92:10: note: declared here\n     void attach(F &&func, float t)\n          ^~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp: In member function 'void ServoImpl::call()':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp:35:80: warning: 'void mbed::TickerBase::attach(F&&, float) [with F = mbed::Callback<void()>]' is deprecated: Pass a chrono duration, not a float second count. For example use `10ms` rather than `0.01f`. [since mbed-os-6.0.0] [-Wdeprecated-declarations]\n         timeout.attach(mbed::callback(this, &ServoImpl::toggle), duration / 1e6);\n                                                                                ^\nIn file included from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed/mbed.h:84:0,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed.h:8,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/mbed/Servo.cpp:5:\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/mbed_giga/4.6.0/cores/arduino/mbed/drivers/include/drivers/Ticker.h:92:10: note: declared here\n     void attach(F &&func, float t)\n          ^~~~~~\n"
     },
     {
-      "board": "mega-2560",
-      "fixture": "button",
-      "pass": true,
-      "memory": [
-        "Sketch uses 1802 bytes (0%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 25 bytes (0%) of dynamic memory, leaving 8167 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 1802 bytes (0%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 25 bytes (0%) of dynamic memory, leaving 8167 bytes for local variables. Maximum is 8192 bytes.\n"
-    },
-    {
-      "board": "mega-2560",
-      "fixture": "display",
-      "pass": true,
-      "memory": [
-        "Sketch uses 20078 bytes (7%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 591 bytes (7%) of dynamic memory, leaving 7601 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 20078 bytes (7%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 591 bytes (7%) of dynamic memory, leaving 7601 bytes for local variables. Maximum is 8192 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
-    },
-    {
-      "board": "mega-2560",
-      "fixture": "behaviors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 6998 bytes (2%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 267 bytes (3%) of dynamic memory, leaving 7925 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 6998 bytes (2%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 267 bytes (3%) of dynamic memory, leaving 7925 bytes for local variables. Maximum is 8192 bytes.\n"
-    },
-    {
-      "board": "mega-2560",
-      "fixture": "feedback",
-      "pass": true,
-      "memory": [
-        "Sketch uses 3770 bytes (1%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 224 bytes (2%) of dynamic memory, leaving 7968 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 3770 bytes (1%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 224 bytes (2%) of dynamic memory, leaving 7968 bytes for local variables. Maximum is 8192 bytes.\n"
-    },
-    {
-      "board": "mega-2560",
-      "fixture": "peripherals",
-      "pass": true,
-      "memory": [
-        "Sketch uses 12268 bytes (4%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 537 bytes (6%) of dynamic memory, leaving 7655 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 12268 bytes (4%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 537 bytes (6%) of dynamic memory, leaving 7655 bytes for local variables. Maximum is 8192 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_MCP9808_Library/Adafruit_MCP9808.cpp: In member function 'read16':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:249:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n/workspace/scratch/d531f665f301/toolchains/data/packages/arduino/hardware/avr/1.8.6/cores/arduino/main.cpp: In function 'main':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp:148:7: warning: 'reg16._genericdevice' may be used uninitialized in this function [-Wmaybe-uninitialized]\n   if (_genericdevice) {\n       ^\n"
-    },
-    {
-      "board": "mega-2560",
-      "fixture": "expandedSensors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 16288 bytes (6%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 566 bytes (6%) of dynamic memory, leaving 7626 bytes for local variables. Maximum is 8192 bytes."
-      ],
-      "log": "Sketch uses 16288 bytes (6%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 566 bytes (6%) of dynamic memory, leaving 7626 bytes for local variables. Maximum is 8192 bytes.\n"
-    },
-    {
-      "board": "mega-2560",
+      "board": "giga-r1-wifi",
       "fixture": "uart",
       "pass": true,
       "memory": [
-        "Sketch uses 5052 bytes (1%) of program storage space. Maximum is 253952 bytes.",
-        "Global variables use 409 bytes (4%) of dynamic memory, leaving 7783 bytes for local variables. Maximum is 8192 bytes."
+        "Sketch uses 119304 bytes (6%) of program storage space. Maximum is 1966080 bytes.",
+        "Global variables use 47672 bytes (9%) of dynamic memory, leaving 475952 bytes for local variables. Maximum is 523624 bytes."
       ],
-      "log": "Sketch uses 5052 bytes (1%) of program storage space. Maximum is 253952 bytes.\nGlobal variables use 409 bytes (4%) of dynamic memory, leaving 7783 bytes for local variables. Maximum is 8192 bytes.\n"
+      "log": "Sketch uses 119304 bytes (6%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 47672 bytes (9%) of dynamic memory, leaving 475952 bytes for local variables. Maximum is 523624 bytes.\n"
     },
     {
-      "board": "esp32-devkitc",
-      "fixture": "blink",
+      "board": "mkr-1000",
+      "fixture": "adc",
       "pass": true,
       "memory": [
-        "Sketch uses 267959 bytes (20%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20768 bytes (6%) of dynamic memory, leaving 306912 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 20924 bytes (7%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 267959 bytes (20%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20768 bytes (6%) of dynamic memory, leaving 306912 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 20924 bytes (7%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-devkitc",
-      "fixture": "servo",
-      "pass": true,
-      "memory": [
-        "Sketch uses 280155 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 21064 bytes (6%) of dynamic memory, leaving 306616 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 280155 bytes (21%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 21064 bytes (6%) of dynamic memory, leaving 306616 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "button",
-      "pass": true,
-      "memory": [
-        "Sketch uses 268175 bytes (20%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20784 bytes (6%) of dynamic memory, leaving 306896 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 268175 bytes (20%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20784 bytes (6%) of dynamic memory, leaving 306896 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "display",
-      "pass": true,
-      "memory": [
-        "Sketch uses 323763 bytes (24%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22368 bytes (6%) of dynamic memory, leaving 305312 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 323763 bytes (24%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22368 bytes (6%) of dynamic memory, leaving 305312 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
+      "board": "mkr-1000",
       "fixture": "behaviors",
       "pass": true,
       "memory": [
-        "Sketch uses 288551 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 21040 bytes (6%) of dynamic memory, leaving 306640 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 25548 bytes (9%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 288551 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 21040 bytes (6%) of dynamic memory, leaving 306640 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 25548 bytes (9%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-devkitc",
-      "fixture": "feedback",
-      "pass": true,
-      "memory": [
-        "Sketch uses 278439 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20800 bytes (6%) of dynamic memory, leaving 306880 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 278439 bytes (21%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20800 bytes (6%) of dynamic memory, leaving 306880 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "peripherals",
-      "pass": true,
-      "memory": [
-        "Sketch uses 315355 bytes (24%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22392 bytes (6%) of dynamic memory, leaving 305288 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 315355 bytes (24%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22392 bytes (6%) of dynamic memory, leaving 305288 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "expandedSensors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 316955 bytes (24%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22440 bytes (6%) of dynamic memory, leaving 305240 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 316955 bytes (24%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22440 bytes (6%) of dynamic memory, leaving 305240 bytes for local variables. Maximum is 327680 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_32V_2A()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:266:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  266 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_32V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  267 |                     INA219_CONFIG_GAIN_8_320MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~       \n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_32V_1A()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:377:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  377 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_32V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  378 |                     INA219_CONFIG_GAIN_8_320MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~       \n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_16V_400mA()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:468:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  468 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_16V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  469 |                     INA219_CONFIG_GAIN_1_40MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~        \n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "uart",
-      "pass": true,
-      "memory": [
-        "Sketch uses 284711 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20816 bytes (6%) of dynamic memory, leaving 306864 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 284711 bytes (21%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20816 bytes (6%) of dynamic memory, leaving 306864 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "network",
-      "pass": true,
-      "memory": [
-        "Sketch uses 984911 bytes (75%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 47848 bytes (14%) of dynamic memory, leaving 279832 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 984911 bytes (75%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 47848 bytes (14%) of dynamic memory, leaving 279832 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-devkitc",
-      "fixture": "networkTLS",
-      "pass": true,
-      "memory": [
-        "Sketch uses 1075787 bytes (82%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 48408 bytes (14%) of dynamic memory, leaving 279272 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 1075787 bytes (82%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 48408 bytes (14%) of dynamic memory, leaving 279272 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-s3-devkitc",
+      "board": "mkr-1000",
       "fixture": "blink",
       "pass": true,
       "memory": [
-        "Sketch uses 298399 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20656 bytes (6%) of dynamic memory, leaving 307024 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 11260 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 298399 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20656 bytes (6%) of dynamic memory, leaving 307024 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 11260 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
-      "fixture": "servo",
-      "pass": true,
-      "memory": [
-        "Sketch uses 288935 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20664 bytes (6%) of dynamic memory, leaving 307016 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 288935 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20664 bytes (6%) of dynamic memory, leaving 307016 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-s3-devkitc",
+      "board": "mkr-1000",
       "fixture": "button",
       "pass": true,
       "memory": [
-        "Sketch uses 298619 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20672 bytes (6%) of dynamic memory, leaving 307008 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 11432 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 298619 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20672 bytes (6%) of dynamic memory, leaving 307008 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 11432 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
+      "board": "mkr-1000",
       "fixture": "display",
       "pass": true,
       "memory": [
-        "Sketch uses 355231 bytes (27%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22224 bytes (6%) of dynamic memory, leaving 305456 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 34584 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 355231 bytes (27%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22224 bytes (6%) of dynamic memory, leaving 305456 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 34584 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
-      "fixture": "behaviors",
-      "pass": true,
-      "memory": [
-        "Sketch uses 293427 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20400 bytes (6%) of dynamic memory, leaving 307280 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 293427 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20400 bytes (6%) of dynamic memory, leaving 307280 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-s3-devkitc",
-      "fixture": "feedback",
-      "pass": true,
-      "memory": [
-        "Sketch uses 284079 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20232 bytes (6%) of dynamic memory, leaving 307448 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 284079 bytes (21%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20232 bytes (6%) of dynamic memory, leaving 307448 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-s3-devkitc",
-      "fixture": "peripherals",
-      "pass": true,
-      "memory": [
-        "Sketch uses 346691 bytes (26%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22248 bytes (6%) of dynamic memory, leaving 305432 bytes for local variables. Maximum is 327680 bytes."
-      ],
-      "log": "Sketch uses 346691 bytes (26%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22248 bytes (6%) of dynamic memory, leaving 305432 bytes for local variables. Maximum is 327680 bytes.\n"
-    },
-    {
-      "board": "esp32-s3-devkitc",
+      "board": "mkr-1000",
       "fixture": "expandedSensors",
       "pass": true,
       "memory": [
-        "Sketch uses 348283 bytes (26%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 22296 bytes (6%) of dynamic memory, leaving 305384 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 30820 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 348283 bytes (26%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 22296 bytes (6%) of dynamic memory, leaving 305384 bytes for local variables. Maximum is 327680 bytes.\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_32V_2A()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:266:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  266 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_32V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  267 |                     INA219_CONFIG_GAIN_8_320MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~       \n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_32V_1A()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:377:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  377 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_32V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  378 |                     INA219_CONFIG_GAIN_8_320MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~       \n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp: In member function 'void Adafruit_INA219::setCalibration_16V_400mA()':\n/workspace/scratch/d531f665f301/toolchains/user/libraries/Adafruit_INA219/Adafruit_INA219.cpp:468:53: warning: bitwise operation between different enumeration types '<unnamed enum>' and '<unnamed enum>' is deprecated [-Wdeprecated-enum-enum-conversion]\n  468 |   uint16_t config = INA219_CONFIG_BVOLTAGERANGE_16V |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n  469 |                     INA219_CONFIG_GAIN_1_40MV | INA219_CONFIG_BADCRES_12BIT |\n      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~        \n"
+      "log": "Sketch uses 30820 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
+      "board": "mkr-1000",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 20784 bytes (7%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 20784 bytes (7%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-1000",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29796 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 29796 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-1000",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 14816 bytes (5%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 14816 bytes (5%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-1000",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16108 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16108 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-1000",
       "fixture": "uart",
       "pass": true,
       "memory": [
-        "Sketch uses 290439 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 20248 bytes (6%) of dynamic memory, leaving 307432 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 28884 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 290439 bytes (22%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 20248 bytes (6%) of dynamic memory, leaving 307432 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 28884 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
-      "fixture": "network",
+      "board": "mkr-gsm-1400",
+      "fixture": "adc",
       "pass": true,
       "memory": [
-        "Sketch uses 970991 bytes (74%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 46120 bytes (14%) of dynamic memory, leaving 281560 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 21916 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 970991 bytes (74%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 46120 bytes (14%) of dynamic memory, leaving 281560 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 21916 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes.\n"
     },
     {
-      "board": "esp32-s3-devkitc",
-      "fixture": "networkTLS",
+      "board": "mkr-gsm-1400",
+      "fixture": "behaviors",
       "pass": true,
       "memory": [
-        "Sketch uses 1060415 bytes (80%) of program storage space. Maximum is 1310720 bytes.",
-        "Global variables use 46680 bytes (14%) of dynamic memory, leaving 281000 bytes for local variables. Maximum is 327680 bytes."
+        "Sketch uses 26672 bytes (10%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes."
       ],
-      "log": "Sketch uses 1060415 bytes (80%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 46680 bytes (14%) of dynamic memory, leaving 281000 bytes for local variables. Maximum is 327680 bytes.\n"
+      "log": "Sketch uses 26672 bytes (10%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12404 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12404 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12576 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12576 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 35284 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3776 bytes (11%) of dynamic memory, leaving 28992 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 35284 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3776 bytes (11%) of dynamic memory, leaving 28992 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 31504 bytes (12%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3788 bytes (11%) of dynamic memory, leaving 28980 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 31504 bytes (12%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3788 bytes (11%) of dynamic memory, leaving 28980 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 22032 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 22032 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30480 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3748 bytes (11%) of dynamic memory, leaving 29020 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 30480 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3748 bytes (11%) of dynamic memory, leaving 29020 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 15940 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 15940 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 17012 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 17012 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-gsm-1400",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30116 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 30116 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21788 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21788 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 26544 bytes (10%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 26544 bytes (10%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12276 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12276 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12448 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12448 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 35156 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3776 bytes (11%) of dynamic memory, leaving 28992 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 35156 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3776 bytes (11%) of dynamic memory, leaving 28992 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 31376 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3788 bytes (11%) of dynamic memory, leaving 28980 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 31376 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3788 bytes (11%) of dynamic memory, leaving 28980 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21904 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21904 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30352 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3748 bytes (11%) of dynamic memory, leaving 29020 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 30352 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3748 bytes (11%) of dynamic memory, leaving 29020 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 15812 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 15812 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16884 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16884 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-nb-1500",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29988 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 29988 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21424 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21424 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 26048 bytes (9%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 26048 bytes (9%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11760 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11760 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11932 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11932 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 34684 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 34684 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30920 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 30920 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21284 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21284 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29896 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 29896 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 15316 bytes (5%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 15316 bytes (5%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16608 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16608 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-vidor-4000",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29388 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 29388 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21040 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21040 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 25664 bytes (9%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 25664 bytes (9%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11376 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11376 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11548 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11548 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 34700 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3792 bytes (11%) of dynamic memory, leaving 28976 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 34700 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3792 bytes (11%) of dynamic memory, leaving 28976 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30936 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 30936 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 20900 bytes (7%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3020 bytes (9%) of dynamic memory, leaving 29748 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 20900 bytes (7%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3020 bytes (9%) of dynamic memory, leaving 29748 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29912 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 29912 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 14932 bytes (5%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 14932 bytes (5%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16224 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16224 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-wan-1300",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29004 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 29004 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21672 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21672 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 26296 bytes (10%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 26296 bytes (10%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12008 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12008 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12180 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12180 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 34884 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3792 bytes (11%) of dynamic memory, leaving 28976 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 34884 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3792 bytes (11%) of dynamic memory, leaving 28976 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 31120 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 31120 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21532 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3020 bytes (9%) of dynamic memory, leaving 29748 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21532 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3020 bytes (9%) of dynamic memory, leaving 29748 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30096 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 30096 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 15564 bytes (5%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 15564 bytes (5%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16856 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16856 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-wan-1310",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29636 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 29636 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21844 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21844 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3024 bytes (9%) of dynamic memory, leaving 29744 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 26600 bytes (10%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 26600 bytes (10%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3108 bytes (9%) of dynamic memory, leaving 29660 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12332 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12332 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2996 bytes (9%) of dynamic memory, leaving 29772 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12504 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 12504 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3012 bytes (9%) of dynamic memory, leaving 29756 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 35272 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3808 bytes (11%) of dynamic memory, leaving 28960 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 35272 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3808 bytes (11%) of dynamic memory, leaving 28960 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 31492 bytes (12%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 31492 bytes (12%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3820 bytes (11%) of dynamic memory, leaving 28948 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 21960 bytes (8%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 21960 bytes (8%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3036 bytes (9%) of dynamic memory, leaving 29732 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30468 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 30468 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3780 bytes (11%) of dynamic memory, leaving 28988 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 15868 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 15868 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3084 bytes (9%) of dynamic memory, leaving 29684 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16940 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16940 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3120 bytes (9%) of dynamic memory, leaving 29648 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-wifi-1010",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30044 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 30044 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3404 bytes (10%) of dynamic memory, leaving 29364 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 20924 bytes (7%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 20924 bytes (7%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2444 bytes (7%) of dynamic memory, leaving 30324 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 25548 bytes (9%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 25548 bytes (9%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2528 bytes (7%) of dynamic memory, leaving 30240 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11260 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11260 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2416 bytes (7%) of dynamic memory, leaving 30352 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11432 bytes (4%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 11432 bytes (4%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2432 bytes (7%) of dynamic memory, leaving 30336 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 34584 bytes (13%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 34584 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3212 bytes (9%) of dynamic memory, leaving 29556 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 30820 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 30820 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3240 bytes (9%) of dynamic memory, leaving 29528 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 20784 bytes (7%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 20784 bytes (7%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2440 bytes (7%) of dynamic memory, leaving 30328 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 29796 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on samd architecture(s).\nSketch uses 29796 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3200 bytes (9%) of dynamic memory, leaving 29568 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 14816 bytes (5%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 14816 bytes (5%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2504 bytes (7%) of dynamic memory, leaving 30264 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 16108 bytes (6%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 16108 bytes (6%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2540 bytes (7%) of dynamic memory, leaving 30228 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void _initISR(Tc*, uint8_t, uint32_t, IRQn_Type, uint8_t, uint8_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:120:56: warning: unused parameter 'id' [-Wunused-parameter]\n static void _initISR(Tc *tc, uint8_t channel, uint32_t id, IRQn_Type irqn, uint8_t gcmForTimer, uint8_t intEnableBit)\n                                                        ^~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp: In function 'void finISR(timer16_Sequence_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/samd/Servo.cpp:174:39: warning: unused parameter 'timer' [-Wunused-parameter]\n static void finISR(timer16_Sequence_t timer)\n                                       ^~~~~\n"
+    },
+    {
+      "board": "mkr-zero",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 28884 bytes (11%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 28884 bytes (11%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 2824 bytes (8%) of dynamic memory, leaving 29944 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 40544 bytes (15%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3972 bytes (12%) of dynamic memory, leaving 28796 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 40544 bytes (15%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3972 bytes (12%) of dynamic memory, leaving 28796 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 44044 bytes (16%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 4024 bytes (12%) of dynamic memory, leaving 28744 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 44044 bytes (16%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 4024 bytes (12%) of dynamic memory, leaving 28744 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 39068 bytes (14%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3948 bytes (12%) of dynamic memory, leaving 28820 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 39068 bytes (14%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3948 bytes (12%) of dynamic memory, leaving 28820 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'bool IRQManager::addPeripheral(Peripheral_t, void*)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:385:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:448:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:609:26: warning: unused variable 'scfg' [-Wunused-variable]\n         i2c_slave_cfg_t *scfg = (i2c_slave_cfg_t *)p_cfg->scfg;\n                          ^~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:701:27: warning: unused variable 'mcfg' [-Wunused-variable]\n         i2c_master_cfg_t *mcfg = (i2c_master_cfg_t *)p_cfg->mcfg;\n                           ^~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_error_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:49: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_error_link_event(int li, int ch)\n                                                 ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:57: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_error_link_event(int li, int ch)\n                                                         ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_rx_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:46: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_rx_link_event(int li, int ch)\n                                              ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:54: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_rx_link_event(int li, int ch)\n                                                      ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_tx_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:46: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_tx_link_event(int li, int ch)\n                                              ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:54: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_tx_link_event(int li, int ch)\n                                                      ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp: In function 'int pin2IrqChannel(int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp:78:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n   if(pin < 0 || pin >= PINS_COUNT) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c: In function 'cm_backtrace_init':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:144:13: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     fw_name = firmware_name;\n             ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:145:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     hw_ver = hardware_ver;\n            ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:146:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     sw_ver = software_ver;\n            ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c: In function 'wait_pipe_fifo_empty':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:289:3: warning: 'return' with a value, in function returning void\n   TU_ASSERT(num);\n   ^~~~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:288:13: note: declared here\n static void wait_pipe_fifo_empty(rusb2_reg_t* rusb, uint8_t num) {\n             ^~~~~~~~~~~~~~~~~~~~\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 39252 bytes (14%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3964 bytes (12%) of dynamic memory, leaving 28804 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 39252 bytes (14%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3964 bytes (12%) of dynamic memory, leaving 28804 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 60448 bytes (23%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 5488 bytes (16%) of dynamic memory, leaving 27280 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 60448 bytes (23%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 5488 bytes (16%) of dynamic memory, leaving 27280 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 55732 bytes (21%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 5508 bytes (16%) of dynamic memory, leaving 27260 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 55732 bytes (21%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 5508 bytes (16%) of dynamic memory, leaving 27260 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 40124 bytes (15%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3976 bytes (12%) of dynamic memory, leaving 28792 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 40124 bytes (15%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3976 bytes (12%) of dynamic memory, leaving 28792 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 54588 bytes (20%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 5432 bytes (16%) of dynamic memory, leaving 27336 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on renesas_uno architecture(s).\nSketch uses 54588 bytes (20%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 5432 bytes (16%) of dynamic memory, leaving 27336 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 42232 bytes (16%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 3976 bytes (12%) of dynamic memory, leaving 28792 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 42232 bytes (16%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3976 bytes (12%) of dynamic memory, leaving 28792 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 42004 bytes (16%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 4352 bytes (13%) of dynamic memory, leaving 28416 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 42004 bytes (16%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 4352 bytes (13%) of dynamic memory, leaving 28416 bytes for local variables. Maximum is 32768 bytes.\nIn file included from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Interrupts.h:27:0,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/ArduinoAPI.h:29,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Arduino.h:4,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:25:\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp: In member function 'void Servo::writeMicroseconds(int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Common.h:62:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))\n                                  ~~~~~^~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:257:28: note: in expansion of macro 'constrain'\n         servo->period_us = constrain(us, servo->period_min, servo->period_max);\n                            ^~~~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Common.h:62:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))\n                                                     ~~~~~^~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:257:28: note: in expansion of macro 'constrain'\n         servo->period_us = constrain(us, servo->period_min, servo->period_max);\n                            ^~~~~~~~~\n"
+    },
+    {
+      "board": "uno-r4-minima",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 48208 bytes (18%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 4356 bytes (13%) of dynamic memory, leaving 28412 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 48208 bytes (18%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 4356 bytes (13%) of dynamic memory, leaving 28412 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "adc",
+      "pass": true,
+      "memory": [
+        "Sketch uses 53064 bytes (20%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6772 bytes (20%) of dynamic memory, leaving 25996 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 53064 bytes (20%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6772 bytes (20%) of dynamic memory, leaving 25996 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 56572 bytes (21%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6824 bytes (20%) of dynamic memory, leaving 25944 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 56572 bytes (21%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6824 bytes (20%) of dynamic memory, leaving 25944 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 51920 bytes (19%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6748 bytes (20%) of dynamic memory, leaving 26020 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 51920 bytes (19%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6748 bytes (20%) of dynamic memory, leaving 26020 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'bool IRQManager::addPeripheral(Peripheral_t, void*)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:385:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:448:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n         if (irqcfg->first_irq_number != FSP_INVALID_VECTOR) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:609:26: warning: unused variable 'scfg' [-Wunused-variable]\n         i2c_slave_cfg_t *scfg = (i2c_slave_cfg_t *)p_cfg->scfg;\n                          ^~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:701:27: warning: unused variable 'mcfg' [-Wunused-variable]\n         i2c_master_cfg_t *mcfg = (i2c_master_cfg_t *)p_cfg->mcfg;\n                           ^~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_error_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:49: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_error_link_event(int li, int ch)\n                                                 ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1779:57: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_error_link_event(int li, int ch)\n                                                         ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_rx_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:46: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_rx_link_event(int li, int ch)\n                                              ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1794:54: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_rx_link_event(int li, int ch)\n                                                      ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp: In member function 'void IRQManager::set_canfd_tx_link_event(int, int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:46: warning: unused parameter 'li' [-Wunused-parameter]\n void IRQManager::set_canfd_tx_link_event(int li, int ch)\n                                              ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/IRQManager.cpp:1809:54: warning: unused parameter 'ch' [-Wunused-parameter]\n void IRQManager::set_canfd_tx_link_event(int li, int ch)\n                                                      ^~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp: In function 'int pin2IrqChannel(int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Interrupts.cpp:78:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n   if(pin < 0 || pin >= PINS_COUNT) {\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c: In function 'cm_backtrace_init':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:144:13: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     fw_name = firmware_name;\n             ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:145:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     hw_ver = hardware_ver;\n            ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/cm_backtrace/cm_backtrace.c:146:12: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]\n     sw_ver = software_ver;\n            ^\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c: In function 'wait_pipe_fifo_empty':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:289:3: warning: 'return' with a value, in function returning void\n   TU_ASSERT(num);\n   ^~~~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/tinyusb/rusb2/dcd_rusb2.c:288:13: note: declared here\n static void wait_pipe_fifo_empty(rusb2_reg_t* rusb, uint8_t num) {\n             ^~~~~~~~~~~~~~~~~~~~\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 52112 bytes (19%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6764 bytes (20%) of dynamic memory, leaving 26004 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 52112 bytes (19%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6764 bytes (20%) of dynamic memory, leaving 26004 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 72976 bytes (27%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 9384 bytes (28%) of dynamic memory, leaving 23384 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 72976 bytes (27%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 9384 bytes (28%) of dynamic memory, leaving 23384 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "expandedSensors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 68288 bytes (26%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 9404 bytes (28%) of dynamic memory, leaving 23364 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 68288 bytes (26%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 9404 bytes (28%) of dynamic memory, leaving 23364 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 52652 bytes (20%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6776 bytes (20%) of dynamic memory, leaving 25992 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 52652 bytes (20%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6776 bytes (20%) of dynamic memory, leaving 25992 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 67120 bytes (25%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 9328 bytes (28%) of dynamic memory, leaving 23440 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "WARNING: library BH1750 claims to run on avr, sam, esp8266, esp32, stm32 architecture(s) and may be incompatible with your current board which runs on renesas_uno architecture(s).\nSketch uses 67120 bytes (25%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 9328 bytes (28%) of dynamic memory, leaving 23440 bytes for local variables. Maximum is 32768 bytes.\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp: In member function 'virtual void TwoWire::setClock(uint32_t)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/libraries/Wire/Wire.cpp:571:14: warning: enumeration value 'I2C_MASTER_RATE_FASTPLUS' not handled in switch [-Wswitch]\n       switch (m_i2c_cfg.rate) {\n              ^\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "pwm",
+      "pass": true,
+      "memory": [
+        "Sketch uses 54820 bytes (20%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6776 bytes (20%) of dynamic memory, leaving 25992 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 54820 bytes (20%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6776 bytes (20%) of dynamic memory, leaving 25992 bytes for local variables. Maximum is 32768 bytes.\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 54596 bytes (20%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 7152 bytes (21%) of dynamic memory, leaving 25616 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 54596 bytes (20%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 7152 bytes (21%) of dynamic memory, leaving 25616 bytes for local variables. Maximum is 32768 bytes.\nIn file included from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Interrupts.h:27:0,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/ArduinoAPI.h:29,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/Arduino.h:4,\n                 from /workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:25:\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp: In member function 'void Servo::writeMicroseconds(int)':\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Common.h:62:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))\n                                  ~~~~~^~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:257:28: note: in expansion of macro 'constrain'\n         servo->period_us = constrain(us, servo->period_min, servo->period_max);\n                            ^~~~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-data/packages/arduino/hardware/renesas_uno/1.6.0/cores/arduino/api/Common.h:62:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]\n #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))\n                                                     ~~~~~^~~~~~~\n/workspace/scratch/d531f665f301/board-support/arduino-user/libraries/Servo/src/renesas/Servo.cpp:257:28: note: in expansion of macro 'constrain'\n         servo->period_us = constrain(us, servo->period_min, servo->period_max);\n                            ^~~~~~~~~\n"
+    },
+    {
+      "board": "uno-r4-wifi",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 58212 bytes (22%) of program storage space. Maximum is 262144 bytes.",
+        "Global variables use 6792 bytes (20%) of dynamic memory, leaving 25976 bytes for local variables. Maximum is 32768 bytes."
+      ],
+      "log": "Sketch uses 58212 bytes (22%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 6792 bytes (20%) of dynamic memory, leaving 25976 bytes for local variables. Maximum is 32768 bytes.\n"
     }
   ]
 }

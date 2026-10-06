@@ -1,0 +1,67 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.4.0-rc.1",
+  "name": "A little heartbeat",
+  "board": "uno-r4-wifi",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "clock",
+      "label": "Clock",
+      "x": 65,
+      "y": 140,
+      "props": {
+        "period": 1000,
+        "duty": 50
+      }
+    },
+    {
+      "id": "n2",
+      "type": "led",
+      "label": "Digital output",
+      "x": 325,
+      "y": 140,
+      "props": {
+        "pin": "13",
+        "activeLow": false
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "Clock controls the LED. Built-in LED (D13). No external LED required.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

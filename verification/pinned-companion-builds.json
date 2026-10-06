@@ -1,43 +1,60 @@
 {
-  "date": "2026-10-05T21:53:09.051Z",
-  "version": "1.3.0-rc.1",
+  "date": "2026-10-06T01:45:55.501Z",
+  "version": "1.4.0-rc.1",
   "results": [
     {
-      "id": "91ec5518-3833-4d1f-9c03-b84f3e24f62b",
+      "id": "6d6fde4f-cf50-4577-8103-ac829a1cbeca",
       "kind": "build",
       "status": "succeeded",
-      "log": "Downloading library PubSubClient@2.8.0...\nPubSubClient@2.8.0 PubSubClient@2.8.0 already downloaded\nInstalling library PubSubClient@2.8.0...\nDownloading library Adafruit BME280 Library@2.3.0...\nAdafruit BME280 Library@2.3.0 Adafruit BME280 Library@2.3.0 already downloaded\nInstalling library Adafruit BME280 Library@2.3.0...\nThe library Adafruit BME280 Library has been added from sketch project.\nThe library Adafruit BusIO has been added from sketch project.\nThe library Adafruit Unified Sensor has been added from sketch project.\nThe library PubSubClient has been added from sketch project.\nSketch uses 1075835 bytes (82%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 48408 bytes (14%) of dynamic memory, leaving 279272 bytes for local variables. Maximum is 327680 bytes.\n",
-      "board": "esp32-devkitc",
-      "fingerprint": "6d0e3883483c9f1616be005118b2d1107743e3b383042a014c08875255faf716",
-      "started": 1791237132818,
-      "ended": 1791237158482,
+      "log": "Downloading platform arduino:samd@1.8.14...\n\rDownloading index: package_index.tar.bz2 0 B / 110.85 KiB    0.00%\rDownloading index: package_index.tar.bz2 downloaded\narduino:samd@1.8.14 arduino:samd@1.8.14 already downloaded\nInstalling platform arduino:samd@1.8.14...\nDownloading tool arduino:arduinoOTA@1.2.1...\narduino:arduinoOTA@1.2.1 arduino:arduinoOTA@1.2.1 already downloaded\nInstalling tool arduino:arduinoOTA@1.2.1...\nDownloading tool arduino:arm-none-eabi-gcc@7-2017q4...\narduino:arm-none-eabi-gcc@7-2017q4 arduino:arm-none-eabi-gcc@7-2017q4 already downloaded\nInstalling tool arduino:arm-none-eabi-gcc@7-2017q4...\nDownloading tool arduino:avrdude@6.3.0-arduino9...\narduino:avrdude@6.3.0-arduino9 arduino:avrdude@6.3.0-arduino9 already downloaded\nInstalling tool arduino:avrdude@6.3.0-arduino9...\nDownloading tool arduino:bossac@1.7.0-arduino3...\narduino:bossac@1.7.0-arduino3 arduino:bossac@1.7.0-arduino3 already downloaded\nInstalling tool arduino:bossac@1.7.0-arduino3...\nDownloading tool arduino:CMSIS@4.5.0...\narduino:CMSIS@4.5.0 arduino:CMSIS@4.5.0 already downloaded\nInstalling tool arduino:CMSIS@4.5.0...\nDownloading tool arduino:CMSIS-Atmel@1.2.0...\narduino:CMSIS-Atmel@1.2.0 arduino:CMSIS-Atmel@1.2.0 already downloaded\nInstalling tool arduino:CMSIS-Atmel@1.2.0...\nDownloading tool arduino:openocd@0.10.0-arduino7...\narduino:openocd@0.10.0-arduino7 arduino:openocd@0.10.0-arduino7 already downloaded\nInstalling tool arduino:openocd@0.10.0-arduino7...\nDownloading library Adafruit MCP9808 Library@2.0.2...\nAdafruit MCP9808 Library@2.0.2 Adafruit MCP9808 Library@2.0.2 already downloaded\nInstalling library Adafruit MCP9808 Library@2.0.2...\nDownloading library Adafruit Unified Sensor@1.1.15...\nAdafruit Unified Sensor@1.1.15 Adafruit Unified Sensor@1.1.15 already downloaded\nInstalling library Adafruit Unified Sensor@1.1.15...\nDownloading library Adafruit SH110X@2.1.15...\nAdafruit SH110X@2.1.15 Adafruit SH110X@2.1.15 already downloaded\nInstalling library Adafruit SH110X@2.1.15...\nDownloading library Adafruit SSD1306@2.5.17...\nAdafruit SSD1306@2.5.17 Adafruit SSD1306@2.5.17 already downloaded\nInstalling library Adafruit SSD1306@2.5.17...\nDownloading library Adafruit GFX Library@1.12.6...\nAdafruit GFX Library@1.12.6 Adafruit GFX Library@1.12.6 already downloaded\nInstalling library Adafruit GFX Library@1.12.6...\nDownloading library Adafruit BusIO@1.17.4...\nAdafruit BusIO@1.17.4 Adafruit BusIO@1.17.4 already downloaded\nInstalling library Adafruit BusIO@1.17.4...\nThe library Adafruit MCP9808 Library has been added from sketch project.\nThe library Adafruit BusIO has been added from sketch project.\nThe library Adafruit Unified Sensor has been added from sketch project.\nThe library Adafruit GFX Library has been added from sketch project.\nThe library Adafruit SSD1306 has been added from sketch project.\nSketch uses 35272 bytes (13%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 3808 bytes (11%) of dynamic memory, leaving 28960 bytes for local variables. Maximum is 32768 bytes.\n",
+      "board": "mkr-wifi-1010",
+      "fingerprint": "eaf731f19bbbf75d996b6853c15c85c1d9d3d02d69284969bd82ffec3cc9fae2",
+      "started": 1791251079194,
+      "ended": 1791251110798,
       "error": null,
       "diagnostics": [],
       "artifacts": [
         "electronbench_project.ino.bin",
-        "electronbench_project.ino.bootloader.bin",
         "electronbench_project.ino.elf",
-        "electronbench_project.ino.merged.bin",
-        "electronbench_project.ino.partitions.bin"
+        "electronbench_project.ino.hex",
+        "electronbench_project.ino.with_bootloader.bin",
+        "electronbench_project.ino.with_bootloader.hex"
       ]
     },
     {
-      "id": "64f8f0ea-5870-4fc5-bc9d-e257caddfead",
+      "id": "5df0210f-30aa-4053-92ec-dfcbb2603c69",
       "kind": "build",
       "status": "succeeded",
-      "log": "The library Adafruit BME280 Library has been added from sketch project.\nThe library Adafruit BusIO has been added from sketch project.\nThe library Adafruit Unified Sensor has been added from sketch project.\nThe library PubSubClient has been added from sketch project.\nSketch uses 1060483 bytes (80%) of program storage space. Maximum is 1310720 bytes.\nGlobal variables use 46680 bytes (14%) of dynamic memory, leaving 281000 bytes for local variables. Maximum is 327680 bytes.\n",
-      "board": "esp32-s3-devkitc",
-      "fingerprint": "4057902ec3212465ebe85902a05930a10641e92e4510da1d50fc5d96d26a7fe8",
-      "started": 1791237158946,
-      "ended": 1791237188906,
+      "log": "Downloading platform arduino:renesas_uno@1.6.0...\n\rDownloading index: package_index.tar.bz2 0 B / 110.85 KiB    0.00%\rDownloading index: package_index.tar.bz2 downloaded\narduino:renesas_uno@1.6.0 arduino:renesas_uno@1.6.0 already downloaded\nInstalling platform arduino:renesas_uno@1.6.0...\nDownloading tool arduino:bossac@1.9.1-arduino5...\narduino:bossac@1.9.1-arduino5 arduino:bossac@1.9.1-arduino5 already downloaded\nInstalling tool arduino:bossac@1.9.1-arduino5...\nDownloading tool arduino:dfu-util@0.11.0-arduino5...\narduino:dfu-util@0.11.0-arduino5 arduino:dfu-util@0.11.0-arduino5 already downloaded\nInstalling tool arduino:dfu-util@0.11.0-arduino5...\nDownloading tool arduino:openocd@0.11.0-arduino2...\narduino:openocd@0.11.0-arduino2 arduino:openocd@0.11.0-arduino2 already downloaded\nInstalling tool arduino:openocd@0.11.0-arduino2...\nThe library Adafruit MCP9808 Library has been added from sketch project.\nThe library Adafruit BusIO has been added from sketch project.\nThe library Adafruit Unified Sensor has been added from sketch project.\nThe library Adafruit GFX Library has been added from sketch project.\nThe library Adafruit SSD1306 has been added from sketch project.\nSketch uses 72992 bytes (27%) of program storage space. Maximum is 262144 bytes.\nGlobal variables use 9384 bytes (28%) of dynamic memory, leaving 23384 bytes for local variables. Maximum is 32768 bytes.\n",
+      "board": "uno-r4-wifi",
+      "fingerprint": "a0ba3eb8b61c418fd80d14f84021b13219e68c6b178735c0dfb0296fe53e384e",
+      "started": 1791251111363,
+      "ended": 1791251128804,
       "error": null,
       "diagnostics": [],
       "artifacts": [
         "electronbench_project.ino.bin",
-        "electronbench_project.ino.bootloader.bin",
         "electronbench_project.ino.elf",
-        "electronbench_project.ino.merged.bin",
-        "electronbench_project.ino.partitions.bin"
+        "electronbench_project.ino.hex"
+      ]
+    },
+    {
+      "id": "4b0cc106-9721-4874-9799-40cc4b3cf482",
+      "kind": "build",
+      "status": "succeeded",
+      "log": "Downloading platform arduino:mbed_giga@4.6.0...\n\rDownloading index: package_index.tar.bz2 0 B / 110.85 KiB    0.00%\rDownloading index: package_index.tar.bz2 downloaded\narduino:mbed_giga@4.6.0 arduino:mbed_giga@4.6.0 already downloaded\nInstalling platform arduino:mbed_giga@4.6.0...\nDownloading tool arduino:dfu-util@0.10.0-arduino1...\narduino:dfu-util@0.10.0-arduino1 arduino:dfu-util@0.10.0-arduino1 already downloaded\nInstalling tool arduino:dfu-util@0.10.0-arduino1...\nDownloading tool arduino:imgtool@1.8.0-arduino.2...\narduino:imgtool@1.8.0-arduino.2 arduino:imgtool@1.8.0-arduino.2 already downloaded\nInstalling tool arduino:imgtool@1.8.0-arduino.2...\nThe library Adafruit MCP9808 Library has been added from sketch project.\nThe library Adafruit BusIO has been added from sketch project.\nThe library Adafruit Unified Sensor has been added from sketch project.\nThe library Adafruit GFX Library has been added from sketch project.\nThe library Adafruit SSD1306 has been added from sketch project.\nSketch uses 139376 bytes (7%) of program storage space. Maximum is 1966080 bytes.\nGlobal variables use 54048 bytes (10%) of dynamic memory, leaving 469576 bytes for local variables. Maximum is 523624 bytes.\n",
+      "board": "giga-r1-wifi",
+      "fingerprint": "0a3728b22972a0d5a700c9c89205346624bb27cf5961e6d2aa84c44adc7884fa",
+      "started": 1791251129425,
+      "ended": 1791251155481,
+      "error": null,
+      "diagnostics": [],
+      "artifacts": [
+        "electronbench_project.ino.bin",
+        "electronbench_project.ino.elf",
+        "electronbench_project.ino.hex",
+        "electronbench_project.ino.with_bootloader.bin",
+        "electronbench_project.ino.with_bootloader.hex"
       ]
     }
   ]
