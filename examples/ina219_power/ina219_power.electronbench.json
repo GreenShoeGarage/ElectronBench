@@ -1,0 +1,117 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "Power on the bench",
+  "board": "uno-r3",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "ina219",
+      "label": "Bus V",
+      "x": 60,
+      "y": 80,
+      "props": {
+        "address": 64,
+        "measurement": "voltage",
+        "interval": 500
+      }
+    },
+    {
+      "id": "n2",
+      "type": "probe",
+      "label": "Bus V serial",
+      "x": 60,
+      "y": 280,
+      "props": {}
+    },
+    {
+      "id": "n3",
+      "type": "ina219",
+      "label": "Current mA",
+      "x": 60,
+      "y": 480,
+      "props": {
+        "address": 64,
+        "measurement": "current",
+        "interval": 500
+      }
+    },
+    {
+      "id": "n4",
+      "type": "probe",
+      "label": "Current mA serial",
+      "x": 330,
+      "y": 80,
+      "props": {}
+    },
+    {
+      "id": "n5",
+      "type": "ina219",
+      "label": "Power mW",
+      "x": 330,
+      "y": 280,
+      "props": {
+        "address": 64,
+        "measurement": "power",
+        "interval": 500
+      }
+    },
+    {
+      "id": "n6",
+      "type": "probe",
+      "label": "Power mW serial",
+      "x": 330,
+      "y": 480,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    },
+    {
+      "id": "e3",
+      "from": "n5",
+      "to": "n6",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "INA219 at 0x40 with 0.1 Ω shunt, 32 V / 2 A library calibration. Respect the device 26 V input limit and breakout shunt rating. Shared ground; not mains isolated.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": true,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

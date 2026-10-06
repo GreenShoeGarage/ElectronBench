@@ -1,0 +1,8 @@
+profiles:
+  electronbench:
+    fqbn: arduino:avr:uno
+    platforms:
+      - platform: arduino:avr (1.8.6)
+    libraries:
+      - Servo (1.2.2)
+default_profile: electronbench

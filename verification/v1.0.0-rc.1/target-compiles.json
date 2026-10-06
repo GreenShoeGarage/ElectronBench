@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-05T21:13:03.263Z",
+  "version": "1.0.0",
+  "mode": "installed toolchains",
+  "results": [
+    {
+      "board": "uno-r3",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 920 bytes (2%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 19218 bytes (59%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 5964 bytes (18%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 3428 bytes (10%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "uno-r3",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11472 bytes (35%) of program storage space. Maximum is 32256 bytes.",
+        "Global variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 920 bytes (2%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 13 bytes (0%) of dynamic memory, leaving 2035 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 3330 bytes (10%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 54 bytes (2%) of dynamic memory, leaving 1994 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 1178 bytes (3%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 25 bytes (1%) of dynamic memory, leaving 2023 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 19218 bytes (62%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 591 bytes (28%) of dynamic memory, leaving 1457 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 5964 bytes (19%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 267 bytes (13%) of dynamic memory, leaving 1781 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 3428 bytes (11%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 224 bytes (10%) of dynamic memory, leaving 1824 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "nano-classic",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 11472 bytes (37%) of program storage space. Maximum is 30720 bytes.",
+        "Global variables use 537 bytes (26%) of dynamic memory, leaving 1511 bytes for local variables. Maximum is 2048 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 1532 bytes (0%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 13 bytes (0%) of dynamic memory, leaving 8179 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 4412 bytes (1%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 165 bytes (2%) of dynamic memory, leaving 8027 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 1802 bytes (0%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 25 bytes (0%) of dynamic memory, leaving 8167 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 20078 bytes (7%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 591 bytes (7%) of dynamic memory, leaving 7601 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 6998 bytes (2%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 267 bytes (3%) of dynamic memory, leaving 7925 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 3770 bytes (1%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 224 bytes (2%) of dynamic memory, leaving 7968 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 12268 bytes (4%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 537 bytes (6%) of dynamic memory, leaving 7655 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "mega-2560",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 5052 bytes (1%) of program storage space. Maximum is 253952 bytes.",
+        "Global variables use 409 bytes (4%) of dynamic memory, leaving 7783 bytes for local variables. Maximum is 8192 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "blink",
+      "pass": true,
+      "memory": [
+        "Sketch uses 267959 bytes (20%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 20768 bytes (6%) of dynamic memory, leaving 306912 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "servo",
+      "pass": true,
+      "memory": [
+        "Sketch uses 280155 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 21064 bytes (6%) of dynamic memory, leaving 306616 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "button",
+      "pass": true,
+      "memory": [
+        "Sketch uses 268175 bytes (20%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 20784 bytes (6%) of dynamic memory, leaving 306896 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "display",
+      "pass": true,
+      "memory": [
+        "Sketch uses 323763 bytes (24%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 22368 bytes (6%) of dynamic memory, leaving 305312 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "behaviors",
+      "pass": true,
+      "memory": [
+        "Sketch uses 288551 bytes (22%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 21040 bytes (6%) of dynamic memory, leaving 306640 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "feedback",
+      "pass": true,
+      "memory": [
+        "Sketch uses 278439 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 20800 bytes (6%) of dynamic memory, leaving 306880 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "peripherals",
+      "pass": true,
+      "memory": [
+        "Sketch uses 315355 bytes (24%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 22392 bytes (6%) of dynamic memory, leaving 305288 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    },
+    {
+      "board": "esp32-devkitc",
+      "fixture": "uart",
+      "pass": true,
+      "memory": [
+        "Sketch uses 284711 bytes (21%) of program storage space. Maximum is 1310720 bytes.",
+        "Global variables use 20816 bytes (6%) of dynamic memory, leaving 306864 bytes for local variables. Maximum is 327680 bytes."
+      ]
+    }
+  ]
+}

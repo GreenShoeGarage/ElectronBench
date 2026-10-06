@@ -1,0 +1,16 @@
+{
+  "name": "electronbench",
+  "version": "1.3.1-rc.1",
+  "private": true,
+  "description": "Local-first visual firmware workbench with an optional Arduino CLI companion",
+  "license": "GPL-3.0-only",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "check": "node scripts/check.cjs",
+    "test": "node tests/run-tests.cjs && node tests/extended-tests.cjs && node tests/platform-tests.cjs && node tests/companion-integration.cjs",
+    "test:dom": "node tests/dom-integration.cjs",
+    "test:compile": "node tests/compiler-matrix.cjs",
+    "test:real-companion": "node tests/real-companion-build.cjs",
+    "start": "node companion/server.cjs"
+  }
+}

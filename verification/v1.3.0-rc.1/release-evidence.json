@@ -1,0 +1,38 @@
+{
+  "release": "1.3.0-rc.1",
+  "date": "2026-10-05",
+  "arduino_cli": "1.5.1",
+  "arduino_avr": "1.8.6",
+  "esp32": "3.3.2",
+  "jsdom": "26",
+  "automated_groups": {
+    "logic_and_generated_host_code": 25,
+    "expanded_board_sensor_network": 10,
+    "dom_workflows": 20,
+    "companion_with_cli_double": 9,
+    "service_worker_with_cache_double": 3
+  },
+  "real_target_compiles": 47,
+  "real_pinned_companion_builds": 2,
+  "physical_board_tested": false,
+  "rendered_browser_tested": false,
+  "live_network_firmware_tested": false,
+  "notes": "TLS fixtures contain an invalid placeholder PEM for compiler coverage only. HTTP validation-only restriction followed matrix; generated firmware of those fixtures is unchanged.",
+  "source_sha256": {
+    "companion/server.cjs": "9777c9f6e1dd48157e90f552537d93cb20a78e18efe7659a659d4ff3fceeabcf",
+    "dist/app.js": "d9d090a38badd051f24377f825286829cf17c4a6bace9aec722ac31562457501",
+    "dist/core.js": "6c7cec12efd0e159c056c0c6ecf03e56c0ae6627c96ea8ccf2e0cb8a8e90aef4",
+    "dist/editor.js": "20442bb2c96793e13ac0a196a44bdace0a8e4387f0a3419d32a4bdc18e3e52d8",
+    "dist/icon.svg": "8d3054692a9e72ba98a569f849edf6c13740218ed53b9900190d0dde29ae4ce4",
+    "dist/index.html": "dbbcd779f68723cf38651b5f3d36b9d3ad4442e539f73f3c02ac573ab76e8207",
+    "dist/manifest.webmanifest": "28992b953c37896e960ba3d1fa7a1a18d732884c871d3d037a768f1b604847ad",
+    "dist/network-core.js": "49536289ef4459283602802f19e3cff3a7316a3be254a9c32f507918a484edf2",
+    "dist/network-ui.js": "545eec9748b444370447cef2472257a29e676726522a06885663aac9261d8854",
+    "dist/project-tools.js": "34e225c6d547e982fa1b4c8fde0d84f7990cd20e423e54e4a89b65ef47cc7c85",
+    "dist/scenario-worker.js": "148285f8eed785623729a62fc14d7d52dbcc07f58c43d3759cacdf3c9ec9fab0",
+    "dist/studio.js": "9b9bc3950a84f8a71917e4ca1e06073607daf41376972edf39998a6b42c335f5",
+    "dist/style.css": "0348af89f4b7c71e1748962eaf37bb62110fa24d5596cb696efe70f496ec158d",
+    "dist/sw.js": "17f1ac73f71e737ad74bdf530c89ec369e1d977a9314e474dfb3c0d19e51a8da",
+    "dist/zip.js": "830eb91b65fb99e27aac85db91b63ab6da7b2021e483b96e1fa1e1be9a89ef44"
+  }
+}

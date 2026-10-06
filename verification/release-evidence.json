@@ -1,0 +1,40 @@
+{
+  "release": "1.3.1-rc.1",
+  "date": "2026-10-05",
+  "base_commit": "a8d006aa1645997d3a981e225de07129ae201fd0",
+  "scope": "UI/UX cleanup of saved v1.3 source; unpublished v2.0 checkout unavailable",
+  "jsdom": "26.1.0",
+  "automated_groups": {
+    "logic_and_generated_host_code": 25,
+    "expanded_board_sensor_network": 10,
+    "dom_workflows": 35,
+    "companion_with_cli_double": 9,
+    "service_worker_with_cache_double": 3
+  },
+  "real_target_compiles_rerun": false,
+  "historical_compiler_evidence": "verification/v1.3.0-rc.1/",
+  "physical_board_tested": false,
+  "rendered_browser_tested": false,
+  "live_network_firmware_tested": false,
+  "source_sha256": {
+    "dist/app.js": "07bb27e54217cf9503f62ee60fabee8e9b9ff4df83343c2f1d91efb0dc3f1922",
+    "dist/core.js": "cdf9c8b9e8e4a96429b6b5dc17b4a7bc32e71aea76dc184bd00a2595948ab89a",
+    "dist/editor.js": "b6c291d99a2074e07334630d320880acf6f420277bcd532175ff6be61e5327ac",
+    "dist/icon.svg": "8d3054692a9e72ba98a569f849edf6c13740218ed53b9900190d0dde29ae4ce4",
+    "dist/index.html": "e7025159bccd92c972c50ab871be063dbbb92dc2786efc8864a1d4c4c8fa7022",
+    "dist/manifest.webmanifest": "28992b953c37896e960ba3d1fa7a1a18d732884c871d3d037a768f1b604847ad",
+    "dist/network-core.js": "49536289ef4459283602802f19e3cff3a7316a3be254a9c32f507918a484edf2",
+    "dist/network-ui.js": "b2146faef2f3d212933cdd549166879fa03b3800b6c61a396b1c8331e720a5a4",
+    "dist/polish.css": "2af2c3c290b0e1b2ed488a29daca309c682a1b8071c99b8ffda1e38ae5188d08",
+    "dist/polish.js": "7802e08fa5f4a9ab7a373ef82c6d15ace79385353d308c2196b9dcf7ead61e73",
+    "dist/project-tools.js": "34e225c6d547e982fa1b4c8fde0d84f7990cd20e423e54e4a89b65ef47cc7c85",
+    "dist/scenario-worker.js": "148285f8eed785623729a62fc14d7d52dbcc07f58c43d3759cacdf3c9ec9fab0",
+    "dist/studio.js": "d224b05c7be015118dc72b794f3153c20a46be6704aa3d5f70885725651872fb",
+    "dist/style.css": "0348af89f4b7c71e1748962eaf37bb62110fa24d5596cb696efe70f496ec158d",
+    "dist/sw.js": "b69b46b8bfa91ddcfd886ebc6deb449471b6b54dbf4275c84b72acdcb6dbc010",
+    "dist/zip.js": "830eb91b65fb99e27aac85db91b63ab6da7b2021e483b96e1fa1e1be9a89ef44",
+    "companion/server.cjs": "9777c9f6e1dd48157e90f552537d93cb20a78e18efe7659a659d4ff3fceeabcf",
+    "tests/dom-integration.cjs": "97af6eb86e075b10e5726af271de6b6574d2b003d56a2725f0b5e0209fffa6db",
+    "tests/platform-tests.cjs": "b8da321debaafaa0a8ba110fefa498d8c9f56ddcec34365b2ba7f70e7f07b83e"
+  }
+}

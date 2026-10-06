@@ -1,0 +1,130 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "MQTT sensor and command",
+  "board": "esp32-devkitc",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "bme280",
+      "label": "BME280 environment",
+      "x": 60,
+      "y": 80,
+      "props": {
+        "address": "118",
+        "measurement": "temperature",
+        "interval": 1000
+      }
+    },
+    {
+      "id": "n2",
+      "type": "mqttPublish",
+      "label": "MQTT number output",
+      "x": 60,
+      "y": 280,
+      "props": {
+        "topic": "electronbench/temperature",
+        "interval": 1000,
+        "retain": false
+      }
+    },
+    {
+      "id": "n3",
+      "type": "mqttSubscribe",
+      "label": "MQTT number input",
+      "x": 60,
+      "y": 480,
+      "props": {
+        "topic": "electronbench/command",
+        "staleMs": 10000
+      }
+    },
+    {
+      "id": "n4",
+      "type": "pwm",
+      "label": "PWM output",
+      "x": 330,
+      "y": 80,
+      "props": {
+        "pin": "25"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "networkStatus",
+      "label": "Wi-Fi connected",
+      "x": 330,
+      "y": 280,
+      "props": {
+        "service": "wifi"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "networkStatus",
+      "label": "MQTT connected",
+      "x": 330,
+      "y": 480,
+      "props": {
+        "service": "mqtt"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 600,
+      "y": 80,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n7",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "Set your SSID, broker, and session credentials in Network settings. Input topic is a plain number 0–255; stale commands become NaN and PWM goes to zero. Preview sliders model messages and connection state.",
+  "network": {
+    "ssid": "YOUR_WIFI_SSID",
+    "mqttHost": "192.168.1.10",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": true,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

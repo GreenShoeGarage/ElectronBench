@@ -1,0 +1,85 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "Follow the dial",
+  "board": "uno-r3",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "analog",
+      "label": "Analog input",
+      "x": 65,
+      "y": 140,
+      "props": {
+        "pin": "A0"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "map",
+      "label": "Map range",
+      "x": 325,
+      "y": 140,
+      "props": {
+        "inMin": 0,
+        "inMax": 1023,
+        "outMin": 0,
+        "outMax": 180,
+        "clamp": true
+      }
+    },
+    {
+      "id": "n3",
+      "type": "servo",
+      "label": "Servo",
+      "x": 585,
+      "y": 140,
+      "props": {
+        "pin": "9"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "Potentiometer: ends to 5 V and GND; wiper to A0. Servo signal to D9. Use a suitable servo supply and common GND.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

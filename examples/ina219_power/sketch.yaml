@@ -1,0 +1,12 @@
+profiles:
+  electronbench:
+    fqbn: arduino:avr:uno
+    platforms:
+      - platform: arduino:avr (1.8.6)
+    libraries:
+      - Adafruit INA219 (1.2.3)
+      - Adafruit BusIO (1.17.4)
+      - Adafruit NeoPixel (1.15.5)
+      - Adafruit GFX Library (1.12.6)
+      - Adafruit SSD1306 (2.5.17)
+default_profile: electronbench

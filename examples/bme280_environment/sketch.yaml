@@ -1,0 +1,10 @@
+profiles:
+  electronbench:
+    fqbn: arduino:avr:uno
+    platforms:
+      - platform: arduino:avr (1.8.6)
+    libraries:
+      - Adafruit BME280 Library (2.3.0)
+      - Adafruit Unified Sensor (1.1.15)
+      - Adafruit BusIO (1.17.4)
+default_profile: electronbench

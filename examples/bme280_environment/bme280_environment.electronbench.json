@@ -1,0 +1,117 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "Environment on the bench",
+  "board": "uno-r3",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "bme280",
+      "label": "Temperature °C",
+      "x": 60,
+      "y": 80,
+      "props": {
+        "address": "118",
+        "measurement": "temperature",
+        "interval": 1000
+      }
+    },
+    {
+      "id": "n2",
+      "type": "probe",
+      "label": "Temperature °C serial",
+      "x": 60,
+      "y": 280,
+      "props": {}
+    },
+    {
+      "id": "n3",
+      "type": "bme280",
+      "label": "Humidity %",
+      "x": 60,
+      "y": 480,
+      "props": {
+        "address": "118",
+        "measurement": "humidity",
+        "interval": 1000
+      }
+    },
+    {
+      "id": "n4",
+      "type": "probe",
+      "label": "Humidity % serial",
+      "x": 330,
+      "y": 80,
+      "props": {}
+    },
+    {
+      "id": "n5",
+      "type": "bme280",
+      "label": "Pressure hPa",
+      "x": 330,
+      "y": 280,
+      "props": {
+        "address": "118",
+        "measurement": "pressure",
+        "interval": 1000
+      }
+    },
+    {
+      "id": "n6",
+      "type": "probe",
+      "label": "Pressure hPa serial",
+      "x": 330,
+      "y": 480,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    },
+    {
+      "id": "e3",
+      "from": "n5",
+      "to": "n6",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "BME280, not BMP280. One device at 0x76; three nodes share its driver. Match module supply and I²C pull-ups to board logic voltage.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": true,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

@@ -1,0 +1,67 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "ESP32 heartbeat on GPIO25",
+  "board": "esp32-devkitc",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "clock",
+      "label": "Clock",
+      "x": 65,
+      "y": 140,
+      "props": {
+        "period": 1000,
+        "duty": 50
+      }
+    },
+    {
+      "id": "n2",
+      "type": "led",
+      "label": "Digital output",
+      "x": 325,
+      "y": 140,
+      "props": {
+        "pin": "25",
+        "activeLow": false
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "External LED on GPIO25 through a suitable current-limiting resistor. Classic ESP32 WROOM-32 profile, 3.3 V logic. Hardware-unverified fixture.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

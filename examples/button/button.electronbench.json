@@ -1,0 +1,98 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "One press, one pulse",
+  "board": "uno-r3",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "button",
+      "label": "Button",
+      "x": 65,
+      "y": 140,
+      "props": {
+        "pin": "2"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "debounce",
+      "label": "Debounce",
+      "x": 325,
+      "y": 140,
+      "props": {
+        "delay": 35
+      }
+    },
+    {
+      "id": "n3",
+      "type": "pulse",
+      "label": "Timed pulse",
+      "x": 585,
+      "y": 140,
+      "props": {
+        "duration": 1500
+      }
+    },
+    {
+      "id": "n4",
+      "type": "led",
+      "label": "Digital output",
+      "x": 845,
+      "y": 140,
+      "props": {
+        "pin": "13",
+        "activeLow": false
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "port": "in"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "Button between D2 and GND (internal pull-up). Pressing produces a 1.5-second pulse on the built-in LED.",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

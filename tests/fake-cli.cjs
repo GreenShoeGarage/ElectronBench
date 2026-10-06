@@ -1,0 +1,8 @@
+// Test double for CLI orchestration; never distributed as an Arduino compiler.
+const fs=require('node:fs'),path=require('node:path'),args=process.argv.slice(2),command=args[0];
+if(command==='version'){console.log('arduino-cli TEST DOUBLE');}
+else if(command==='board'){console.log(JSON.stringify({detected_ports:[{port:{address:'TEST_PORT',protocol:'serial'},matching_boards:[{name:'Test Uno',fqbn:'arduino:avr:uno'}]}]}));}
+else if(command==='compile'){const folder=args.find(a=>fs.existsSync(path.join(a,'electronbench_project.ino')));const source=fs.readFileSync(path.join(folder,'electronbench_project.ino'),'utf8');if(source.includes('EB_TEST_COMPILE_ERROR')){console.error('eb_n2:1:7: error: simulated compiler failure');process.exitCode=1;}else if(source.includes('EB_TEST_SLOW')){setTimeout(()=>{console.log('slow build finished');},30000);}else{const out=args[args.indexOf('--output-dir')+1];fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'electronbench_project.ino.hex'),'TEST BINARY');console.log('Sketch uses 100 bytes.');if(JSON.parse(fs.readFileSync(path.join(folder,'project.electronbench.json'),'utf8')).name==='EB_TEST_SECRET_LOG'){const header=fs.readFileSync(path.join(folder,'electronbench_secrets.h'),'utf8'),value=JSON.parse(header.match(/#define EB_WIFI_PASSWORD ("[^\n]*")/)[1]);process.stdout.write('credential: '+value.slice(0,10));setTimeout(()=>process.stdout.write(value.slice(10)+'\n'),80);}}}
+else if(command==='upload'){console.log('Upload test double completed.');}
+else if(command==='monitor'){console.log('{"ms":100,"n1":42}');process.stdin.on('data',b=>console.log('echo:'+String(b).trim()));setInterval(()=>console.log('n1:43'),100);}
+else process.exitCode=1;

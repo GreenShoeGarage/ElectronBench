@@ -1,0 +1,66 @@
+#!/usr/bin/env node
+/* ELECTRONBENCH local companion. GPL-3.0-only. Node 20+; Arduino CLI 1.5+ */
+'use strict';
+const http=require('node:http'),fs=require('node:fs'),fsp=fs.promises,path=require('node:path'),os=require('node:os'),crypto=require('node:crypto');
+const {spawn}=require('node:child_process');
+const root=path.resolve(__dirname,'..'),web=fs.existsSync(path.join(root,'dist','core.js'))?path.join(root,'dist'):root;
+require(path.join(web,'core.js'));const E=globalThis.EB;
+function createCompanion(options={}){
+ const token=options.token||crypto.randomBytes(32).toString('hex'),cli=options.cli||process.env.ELECTRONBENCH_ARDUINO_CLI||'arduino-cli';
+ const cliPrefix=options.cliPrefix||[];const work=options.work||fs.mkdtempSync(path.join(os.tmpdir(),'electronbench-'));
+ const jobs=new Map();let current=null,serial=null,serialState='disconnected',serialPort='',lineBuffer='',serialRows=[],serialId=0,serialGeneration=0,server;
+ const baseArgs=['--no-color',...(process.env.ELECTRONBENCH_ARDUINO_CONFIG?['--config-file',process.env.ELECTRONBENCH_ARDUINO_CONFIG]:[])];
+ const env={...process.env,ARDUINO_METRICS_ENABLED:'false',ARDUINO_NETWORK_CLOUD_API_SKIP_BOARD_DETECTION_CALLS:'true',ARDUINO_UPDATER_ENABLE_NOTIFICATION:'false'};
+ function command(args){return spawn(cli,[...cliPrefix,...args,...baseArgs],{stdio:['pipe','pipe','pipe'],shell:false,windowsHide:true,env});}
+ function run(args,timeout=30000){return new Promise((resolve,reject)=>{const p=command(args);let output='';const timer=setTimeout(()=>{p.kill();reject(Error('Command timed out.'));},timeout);p.stdout.on('data',b=>output=(output+b).slice(-2000000));p.stderr.on('data',b=>output=(output+b).slice(-2000000));p.on('error',e=>{clearTimeout(timer);reject(Error(e.code==='ENOENT'?'Arduino CLI not found. Install it or set ELECTRONBENCH_ARDUINO_CLI.':e.message));});p.on('close',code=>{clearTimeout(timer);code===0?resolve(output):reject(Error(output||'Arduino CLI failed.'));});});}
+ async function ports(){const result=JSON.parse(await run(['board','list','--json']));const list=Array.isArray(result)?result:(result.detected_ports||[]);return list.filter(r=>r.port?.address&&r.port?.protocol==='serial').map(r=>({address:r.port.address,label:r.matching_boards?.[0]?.name||r.port.label||r.port.address,fqbn:r.matching_boards?.[0]?.fqbn||null}));}
+ async function checkPort(port){if(typeof port!=='string'||!(await ports()).some(p=>p.address===port))throw Error('Select a currently detected serial port.');return port;}
+ function appendLines(text){lineBuffer+=text;const rows=lineBuffer.split(/\r?\n/);lineBuffer=rows.pop().slice(-8192);for(const text of rows){serialRows.push({id:++serialId,time:Date.now(),text:text.slice(0,8192)});}if(serialRows.length>5000)serialRows.splice(0,serialRows.length-5000);}
+ async function stopSerial(){if(serial){const p=serial;serial=null;serialState='disconnected';await new Promise(resolve=>{const t=setTimeout(resolve,2000);p.once('close',()=>{clearTimeout(t);resolve();});p.kill();});}serialState='disconnected';}
+ function publicJob(j){return{id:j.id,kind:j.kind,status:j.status,log:j.log,board:j.board,fingerprint:j.fingerprint,started:j.started,ended:j.ended,error:j.error,diagnostics:j.diagnostics||[],artifacts:j.artifacts||[]};}
+ function job(kind,board,protectedId=null){if(current)throw Error('Another hardware task is running. Wait or cancel it.');const j={id:crypto.randomUUID(),kind,board,status:'running',log:'',started:Date.now(),ended:null,error:null};jobs.set(j.id,j);current=j;while(jobs.size>20){const first=jobs.keys().next().value;if(first===current?.id||first===protectedId)break;const old=jobs.get(first);if(old.dir)fs.rmSync(old.dir,{recursive:true,force:true});jobs.delete(first);}return j;}
+ function execute(j,args){if(j.cancelRequested){j.status='cancelled';j.error=null;j.ended=Date.now();if(current===j)current=null;return Promise.resolve(false);}return new Promise(resolve=>{const p=command(args);j.process=p;let done=false;const end=(code,error)=>{if(done)return;done=true;clearTimeout(timer);if(code===0&&j.kind==='build'&&j.output){try{j.artifacts=fs.readdirSync(j.output).filter(s=>/\.(hex|bin|elf)$/.test(s));}catch{}}j.status=j.cancelRequested?'cancelled':code===0?'succeeded':'failed';j.error=j.cancelRequested?null:error|| (code===0?null:'Arduino CLI failed. Inspect the build log.');j.ended=Date.now();if(current===j)current=null;delete j.process;j.diagnostics=[...j.log.matchAll(/eb_(n[a-zA-Z0-9_-]+):(\d+)(?::\d+)?:\s*(error|warning):\s*([^\n]+)/g)].map(m=>({node:m[1],line:Number(m[2]),severity:m[3],message:m[4]}));resolve(code===0&&!j.cancelRequested);};const timer=setTimeout(()=>{j.error='Task exceeded the 15-minute limit.';p.kill();end(1,j.error);},15*60*1000);const log=b=>{j.rawLog=((j.rawLog||'')+b.toString()).slice(-2000000);let text=j.rawLog;for(const value of j.secretValues||[]){text=text.split(value).join('[redacted]');for(let n=value.length-1;n>0;n--)if(text.endsWith(value.slice(0,n))){text=text.slice(0,-n)+'[redacted]';break;}}j.log=text;};p.stdout.on('data',log);p.stderr.on('data',log);p.on('error',e=>end(1,e.code==='ENOENT'?'Arduino CLI not found. See companion setup instructions.':e.message));p.on('close',code=>end(code));});}
+ const json=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data));};
+ const readBody=req=>new Promise((resolve,reject)=>{let size=0,body='';req.on('data',b=>{size+=b.length;if(size>4000000){reject(Error('Request exceeds 4 MB.'));req.destroy();}else body+=b;});req.on('end',()=>{try{resolve(JSON.parse(body||'{}'));}catch{reject(Error('Invalid JSON request.'));}});req.on('error',reject);});
+ const authorized=req=>{const value=req.headers['x-electronbench-token'];if(typeof value!=='string')return false;const a=Buffer.from(value),b=Buffer.from(token);return a.length===b.length&&crypto.timingSafeEqual(a,b);};
+ async function handler(req,res){
+  const address=server.address(),allowedHosts=new Set([`127.0.0.1:${address.port}`,`localhost:${address.port}`]);
+  if(!allowedHosts.has(req.headers.host)){json(res,403,{error:'Unexpected Host header.'});return;}
+  if(req.headers.origin&&!new Set([...allowedHosts].map(h=>'http://'+h)).has(req.headers.origin)){json(res,403,{error:'Open the local companion editor to use this API.'});return;}
+  const u=new URL(req.url,'http://127.0.0.1');
+  try{
+   if(u.pathname.startsWith('/api/')){
+    if(!authorized(req)){json(res,401,{error:'Open the startup link from the companion terminal to pair this tab.'});return;}
+    if(req.method==='GET'&&u.pathname==='/api/status'){let version=null,error=null;try{version=(await run(['version'])).trim();}catch(e){error=e.message;}json(res,200,{app:'electronbench-companion',version:E.VERSION,cli:version,error,serial:serialState,busy:!!current});return;}
+    if(req.method==='GET'&&u.pathname==='/api/ports'){json(res,200,{ports:await ports()});return;}
+    if(req.method==='GET'&&u.pathname==='/api/job'){const j=jobs.get(u.searchParams.get('id'));if(!j){json(res,404,{error:'This job is no longer retained. Compile again.'});return;}json(res,200,publicJob(j));return;}
+    if(req.method==='GET'&&u.pathname==='/api/serial'){const since=Number(u.searchParams.get('since')||0);json(res,200,{state:serialState,port:serialPort,rows:serialRows.filter(r=>r.id>since),lastId:serialId,generation:serialGeneration});return;}
+    if(req.method!=='POST'){json(res,405,{error:'Unsupported API method.'});return;}
+    const data=await readBody(req);
+    if(u.pathname==='/api/build'){
+     const p=E.importProject(data.project),v=E.validate(p);if(!v.valid||!p.nodes.length)throw Error('Resolve project errors before compiling.');if(p.nodes.some(n=>n.type==='custom')&&!data.allowCustom)throw Error('Review and explicitly allow the custom-code components before compiling.');
+     const header=E.network.secretsHeader(data.secrets||{});const j=job('build',p.board);j.secretValues=Object.values(data.secrets||{}).filter(v=>typeof v==='string'&&v);j.fingerprint=crypto.createHash('sha256').update(JSON.stringify(p)).digest('hex');j.project=p;j.dir=path.join(work,j.id);j.sketch=path.join(j.dir,'electronbench_project');j.output=path.join(j.dir,'build');
+     (async()=>{try{await stopSerial();await fsp.mkdir(j.sketch,{recursive:true});await fsp.mkdir(j.output,{recursive:true});await fsp.writeFile(path.join(j.sketch,'electronbench_project.ino'),E.generate(p));if(E.network.used(p))await fsp.writeFile(path.join(j.sketch,'electronbench_secrets.h'),header,{mode:0o600});const profile=E.buildProfile?E.buildProfile(p):'profiles:\n  electronbench:\n    fqbn: arduino:avr:uno\n    platforms:\n      - platform: arduino:avr (1.8.6)\n';await fsp.writeFile(path.join(j.sketch,'sketch.yaml'),profile);await fsp.writeFile(path.join(j.sketch,'project.electronbench.json'),JSON.stringify(p,null,2));if(await execute(j,['compile','--profile','electronbench','--output-dir',j.output,j.sketch]))j.artifacts=(await fsp.readdir(j.output)).filter(s=>/\.(hex|bin|elf)$/.test(s));}catch(e){j.status='failed';j.error=e.message;j.ended=Date.now();if(current===j)current=null;}})();json(res,202,publicJob(j));return;
+    }
+    if(u.pathname==='/api/upload'){
+     const built=jobs.get(data.buildId);if(!built||built.kind!=='build'||built.status!=='succeeded')throw Error('A successful build is required.');const port=await checkPort(data.port);const j=job('upload',built.board,built.id);j.fingerprint=built.fingerprint;
+     (async()=>{try{await stopSerial();await execute(j,['upload','--profile','electronbench','--port',port,'--input-dir',built.output,built.sketch]);}catch(e){j.status='failed';j.error=e.message;if(current===j)current=null;}})();json(res,202,publicJob(j));return;
+    }
+    if(u.pathname==='/api/cancel'){const j=jobs.get(data.id);if(!j||j!==current)throw Error('No matching running task.');j.cancelRequested=true;j.process?.kill();json(res,200,{cancelled:true});return;}
+    if(u.pathname==='/api/serial/start'){if(current)throw Error('Wait for the build/upload task to finish.');const port=await checkPort(data.port),baud=Number(data.baud||115200);if(![9600,19200,38400,57600,115200,230400].includes(baud))throw Error('Unsupported baud rate.');await stopSerial();serialPort=port;lineBuffer='';serialState='connecting';serialGeneration++;const gen=serialGeneration;const p=command(['monitor','--port',port,'--config',`baudrate=${baud}`,'--quiet']);serial=p;p.stdout.on('data',b=>{if(gen===serialGeneration){serialState='connected';appendLines(b.toString());}});p.stderr.on('data',b=>appendLines(b.toString()));p.on('spawn',()=>{if(gen===serialGeneration)serialState='connected';});p.on('error',e=>{if(gen===serialGeneration){serialState='disconnected';appendLines(e.message+'\n');}});p.on('close',()=>{if(gen===serialGeneration){serialState='disconnected';serial=null;}});json(res,200,{state:serialState});return;}
+    if(u.pathname==='/api/serial/stop'){await stopSerial();json(res,200,{state:'disconnected'});return;}
+    if(u.pathname==='/api/serial/send'){if(!serial||serialState!=='connected')throw Error('Serial monitor is not connected.');if(typeof data.text!=='string'||data.text.length>1024)throw Error('Serial message must be at most 1024 characters.');serial.stdin.write(data.text+'\n');json(res,200,{sent:true});return;}
+    json(res,404,{error:'Unknown operation.'});return;
+   }
+   if(req.method!=='GET'&&req.method!=='HEAD'){res.writeHead(405);res.end();return;}
+   const name=decodeURIComponent(u.pathname)==='/'?'index.html':decodeURIComponent(u.pathname).slice(1);
+   const file=path.resolve(web,name);const extensions={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.json':'application/json'};
+   if(!file.startsWith(web+path.sep)||!extensions[path.extname(file)]||name.split(/[\\/]/).some(n=>n.startsWith('.'))){res.writeHead(404);res.end();return;}
+   const body=await fsp.readFile(file);res.writeHead(200,{'Content-Type':extensions[path.extname(file)],'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'});res.end(req.method==='HEAD'?undefined:body);
+  }catch(e){if(!res.headersSent)json(res,400,{error:e.message});else res.end();}
+ }
+ server=http.createServer(handler);server.requestTimeout=30000;
+ return {server,token,work,listen(port=8787){return new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,'127.0.0.1',()=>resolve(server.address()));});},async close(){current?.process?.kill();await stopSerial();await new Promise(resolve=>server.close(resolve));await fsp.rm(work,{recursive:true,force:true});}};
+}
+module.exports={createCompanion};
+if(require.main===module){const app=createCompanion();app.listen(Number(process.env.ELECTRONBENCH_PORT||8787)).then(a=>{console.log(`ELECTRONBENCH ${globalThis.EB.VERSION}\nOpen this local pairing link:\nhttp://127.0.0.1:${a.port}/#token=${app.token}\nLeave this terminal open. Ctrl+C stops the companion.\nTemporary build files are removed on clean exit.`);}).catch(e=>{console.error(e.message);process.exitCode=1;});for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>app.close().then(()=>process.exit(0)));}

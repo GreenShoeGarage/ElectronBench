@@ -1,0 +1,102 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "HTTP numeric exchange",
+  "board": "esp32-s3-devkitc",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "constant",
+      "label": "Constant",
+      "x": 60,
+      "y": 80,
+      "props": {
+        "value": 22.5
+      }
+    },
+    {
+      "id": "n2",
+      "type": "httpPost",
+      "label": "HTTP POST number",
+      "x": 60,
+      "y": 280,
+      "props": {
+        "url": "http://192.168.1.10/value",
+        "interval": 5000
+      }
+    },
+    {
+      "id": "n3",
+      "type": "httpGet",
+      "label": "HTTP GET number",
+      "x": 60,
+      "y": 480,
+      "props": {
+        "url": "http://192.168.1.10/value",
+        "result": "number",
+        "interval": 5000
+      }
+    },
+    {
+      "id": "n4",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 330,
+      "y": 80,
+      "props": {}
+    },
+    {
+      "id": "n5",
+      "type": "networkStatus",
+      "label": "Network connected",
+      "x": 330,
+      "y": 280,
+      "props": {
+        "service": "wifi"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "port": "in"
+    },
+    {
+      "id": "e2",
+      "from": "n3",
+      "to": "n4",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "Replace the GET/POST URLs with your own endpoints. POST sends text/plain; GET expects a plain numeric body of at most 64 bytes. HTTP is unencrypted; choose HTTPS and add a root CA for private data.",
+  "network": {
+    "ssid": "YOUR_WIFI_SSID",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": true,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}

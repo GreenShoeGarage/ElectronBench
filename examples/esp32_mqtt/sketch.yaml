@@ -1,0 +1,12 @@
+profiles:
+  electronbench:
+    fqbn: esp32:esp32:esp32
+    platforms:
+      - platform: esp32:esp32 (3.3.2)
+        platform_index_url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+    libraries:
+      - PubSubClient (2.8.0)
+      - Adafruit BME280 Library (2.3.0)
+      - Adafruit Unified Sensor (1.1.15)
+      - Adafruit BusIO (1.17.4)
+default_profile: electronbench

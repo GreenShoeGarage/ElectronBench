@@ -1,0 +1,32 @@
+{
+  "release": "1.0.0-rc.1",
+  "date": "2026-10-05",
+  "arduino_cli": "1.5.1",
+  "arduino_avr": "1.8.6",
+  "esp32": "3.3.2",
+  "node": "v24.19.0",
+  "jsdom": "26",
+  "automated_groups": {
+    "logic_and_generated_host_code": 25,
+    "dom_workflows": 15,
+    "companion_with_cli_double": 8,
+    "service_worker_with_cache_double": 3
+  },
+  "physical_board_tested": false,
+  "rendered_browser_tested": false,
+  "notes": "The 30-target matrix and pinned companion builds used provisional version header 1.0.0 before the RC label was applied. Executable generation is unchanged except brace formatting in the feedback guard, recompiled on all four targets afterward. These are compiler results, not physical hardware evidence.",
+  "source_sha256": {
+    "companion/server.cjs": "ffd1b6be1cf2a4cf7692f7373f3cbc619a654b2a7771542753772c30ef37e461",
+    "dist/app.js": "c896df1bf0a05ca13685b04550287aba37aac5d7711c6db1157b8dcc1c894385",
+    "dist/core.js": "13493443eaeb7435d3832d49452dc49305d03805e09efa0e98268746bd7aabff",
+    "dist/icon.svg": "8d3054692a9e72ba98a569f849edf6c13740218ed53b9900190d0dde29ae4ce4",
+    "dist/index.html": "25d4e1a8e1be333681aa28c61e06b5be77d3ea11292e10351ced1be872592b28",
+    "dist/manifest.webmanifest": "28992b953c37896e960ba3d1fa7a1a18d732884c871d3d037a768f1b604847ad",
+    "dist/project-tools.js": "d67454a7dcac591e5b54bf933821cf3488a2c2f36b07c4f400757f347e77a415",
+    "dist/scenario-worker.js": "ddeb21f8b854b07ba3d499f7939ed89391426472dd2b9533f90df29c9ae3125d",
+    "dist/studio.js": "516f3407888d361e1325bcc2df85170dd15caa7e3d3f1392a2e80fbf102dfd6d",
+    "dist/style.css": "2ee1f837513f33f3140ef809f4bd051ea1bf59929d29f2a34da039d9553bb220",
+    "dist/sw.js": "40787d254acab972d09a831c789b66240ce9ee1f4d0da0a8ba7c3d6e58963ad0",
+    "dist/zip.js": "830eb91b65fb99e27aac85db91b63ab6da7b2021e483b96e1fa1e1be9a89ef44"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-05T21:14:50.433Z",
+  "version": "1.0.0",
+  "results": [
+    {
+      "board": "uno-r3",
+      "status": "succeeded",
+      "artifacts": [
+        "electronbench_project.ino.elf",
+        "electronbench_project.ino.hex",
+        "electronbench_project.ino.with_bootloader.bin",
+        "electronbench_project.ino.with_bootloader.hex"
+      ],
+      "started": 1791234806169,
+      "ended": 1791234823696
+    },
+    {
+      "board": "esp32-devkitc",
+      "status": "succeeded",
+      "artifacts": [
+        "electronbench_project.ino.bin",
+        "electronbench_project.ino.bootloader.bin",
+        "electronbench_project.ino.elf",
+        "electronbench_project.ino.merged.bin",
+        "electronbench_project.ino.partitions.bin"
+      ],
+      "started": 1791234824237,
+      "ended": 1791234889917
+    }
+  ]
+}

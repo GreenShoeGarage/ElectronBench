@@ -1,0 +1,101 @@
+{
+  "format": "electronbench",
+  "schema": 2,
+  "version": "1.3.1-rc.1",
+  "name": "Count with explicit feedback",
+  "board": "uno-r3",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "memory",
+      "label": "Sample delay",
+      "x": 40,
+      "y": 100,
+      "props": {
+        "initial": 0
+      }
+    },
+    {
+      "id": "n2",
+      "type": "constant",
+      "label": "Constant",
+      "x": 80,
+      "y": 100,
+      "props": {
+        "value": 1
+      }
+    },
+    {
+      "id": "n3",
+      "type": "math",
+      "label": "Arithmetic",
+      "x": 120,
+      "y": 100,
+      "props": {
+        "operation": "add"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "probe",
+      "label": "Serial value",
+      "x": 160,
+      "y": 100,
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n3",
+      "port": "a"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "port": "b"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n1",
+      "port": "in"
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n4",
+      "port": "in"
+    }
+  ],
+  "view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "notes": "",
+  "network": {
+    "ssid": "",
+    "mqttHost": "",
+    "mqttPort": 1883,
+    "mqttTLS": false,
+    "clientPrefix": "electronbench",
+    "rootCA": "",
+    "ntpHost": "pool.ntp.org",
+    "retryMs": 10000,
+    "timeoutMs": 2000
+  },
+  "settings": {
+    "i2cClock": 100000,
+    "telemetry": false,
+    "telemetryInterval": 100,
+    "nanoOldBootloader": false
+  },
+  "scenarios": [],
+  "modules": [],
+  "revisions": [],
+  "evidence": [],
+  "assumptions": []
+}
